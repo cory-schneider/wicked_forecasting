@@ -43,3 +43,8 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+
+class MergedPdcn(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    pdcnMain = db.Column(db.String(7), nullable=False)
+    pdcnAlt = db.Column(db.String(7), nullable=False)
