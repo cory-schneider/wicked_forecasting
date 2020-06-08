@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+  <form action="" method="post" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <fieldset class="input-group">
+      <legend class="border-bottom mb-4"><h3>{{ legend }}</h3></legend>
+      <div class="container">
+
+      </div>
+      <div class="input-group">
+        {{ form.vip_input.label(class="input-group-text bg-light text-black rounded-0") }}
+        {% if form.vip_input.errors %}
+          {{ form.vip_input(class="form-control form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.vip_input.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          {{ form.vip_input(class="form-control form-control-lg rounded-0") }}
+        {% endif %}
+      </div>
+      <div class="input-group">
+        {{ form.oneportal_input.label(class="input-group-text bg-light text-black rounded-0") }}
+        {% if form.oneportal_input.errors %}
+          {{ form.oneportal_input(class="form-control form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.oneportal_input.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          {{ form.oneportal_input(class="form-control form-control-lg rounded-0") }}
+        {% endif %}
+      </div>
+      <div class="input-group">
+        {{ form.changelog_input.label(class="input-group-text bg-light text-black rounded-0") }}
+        {% if form.changelog_input.errors %}
+          {{ form.changelog_input(class="form-control form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.changelog_input.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          {{ form.changelog_input(class="form-control form-control-lg rounded-0") }}
+        {% endif %}
+      </div>
+    </fieldset>
+    <div class="input-group">
+      {{ form.submit(class="btn btn-outline-secondary") }}
+    </div>
+  </form>
+</div>
+{% endblock content %}

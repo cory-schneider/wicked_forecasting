@@ -1,0 +1,26 @@
+Setting the environment variable in PowerShell
+$env:FLASK_APP = "flaskblog.py"
+
+
+
+"If like me, you ended up wanting to play with the database after making all the changes that Corey did in this video and didn't know what to do, here is a working solution:
+
+1) Make sure to activate the appropriate virtual environment to work with all needed packages.
+2) Open a Python interpreter at the root of your project directory (in the same directory as run.py).
+3) Execute the following code (without comments if you wish):
+
+from flaskblog import create_app, db
+app = create_app()
+# context to run outside the application (no need to launch the server)
+ctx = app.app_context()
+ctx.push()  # start working on database after that command
+# Database manipulations here
+# ...
+ctx.pop()  # exit from the app
+exit()
+
+This explanation comes from StackOverflow here: https://stackoverflow.com/questions/24060553/creating-a-database-outside-the-application-context
+
+"
+
+I am really loving this stuff! I cannot wait to get my first job!
