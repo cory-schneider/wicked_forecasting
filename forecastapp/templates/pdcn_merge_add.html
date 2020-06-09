@@ -11,27 +11,27 @@
                       {{ form.pdcnMain.label(class="form-control-label") }}
 
                       {% if form.pdcnMain.errors %}
-                          {{ form.pdcnMain(class="form-control form-control-lg is-invalid") }}
+                          {{ form.pdcnMain(class="form-control form-control-sm is-invalid") }}
                           <div class="invalid-feedback">
                               {% for error in form.pdcnMain.errors %}
                                   <span>{{ error }}</span>
                               {% endfor %}
                           </div>
                       {% else %}
-                          {{ form.pdcnMain(class="form-control form-control-lg") }}
+                          {{ form.pdcnMain(class="form-control form-control-sm") }}
                       {% endif %}
                   </div>
                   <div class="form-group">
                       {{ form.pdcnAlt.label(class="form-control-label") }}
                       {% if form.pdcnAlt.errors %}
-                          {{ form.pdcnAlt(class="form-control form-control-lg is-invalid") }}
+                          {{ form.pdcnAlt(class="form-control form-control-sm is-invalid") }}
                           <div class="invalid-feedback">
                               {% for error in form.pdcnAlt.errors %}
                                   <span>{{ error }}</span>
                               {% endfor %}
                           </div>
                       {% else %}
-                          {{ form.pdcnAlt(class="form-control form-control-lg") }}
+                          {{ form.pdcnAlt(class="form-control form-control-sm") }}
                       {% endif %}
                   </div>
               </fieldset>
@@ -44,7 +44,6 @@
         <div class="col-md-4">
           <p>
             <table class="table table-striped table-sm table-hover">
-              <caption>PDCN pairs for merging</caption>
               <thead class="thead-dark">
                 <tr>
                   <th scope="col">Main PDCN</th>
@@ -52,10 +51,12 @@
                 </tr>
               </thead>
               <tbody>
+                {% for pdcnPair in pdcnPairList %}
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
+                  <th scope="row">{{ pdcnPair.pdcnMain }}</th>
+                  <td>{{ pdcnPair.pdcnAlt }}</td>
                 </tr>
+                {% endfor %}
               </tbody>
           </table>
           </p>

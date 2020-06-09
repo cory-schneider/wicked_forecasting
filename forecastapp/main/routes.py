@@ -18,14 +18,14 @@ def home():
             return redirect(next_page) if next_page else redirect(url_for('main.home'))
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
-    return render_template('home.html', form=form)
+    return render_template('home.html', form=form, legend='Wicked Weed Inventory Management', title=current_user.username)
 
 
 @main.route("/messages")
 def messages():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
-    return render_template('messages.html', posts=posts)
+    return render_template('messages.html', posts=posts, title='Messaging')
 
 
 @main.route("/about")

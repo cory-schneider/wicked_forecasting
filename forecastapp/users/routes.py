@@ -19,7 +19,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash('Your account has been created! You are now able to log in', 'success')
-        return redirect(url_for('users.login'))
+        return redirect(url_for('main.home'))
     return render_template('register.html', title='Register', form=form)
 
 @users.route("/logout")
@@ -44,7 +44,7 @@ def account():
         form.username.data = current_user.username
         form.email.data = current_user.email
     image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
-    return render_template('account.html', title='Account',
+    return render_template('account.html', title=current_user.username,
                            image_file=image_file, form=form)
 
 @users.route("/user/<string:username>")
@@ -65,7 +65,7 @@ def reset_request():
         user = User.query.filter_by(email=form.email.data).first()
         send_reset_email(user)
         flash('An email has been sent with instructions to reset your password.', 'info')
-        return redirect(url_for('users.login'))
+        return redirect(url_for('main.home'))
     return render_template('reset_request.html', title='Reset Password', form=form)
 
 
@@ -83,5 +83,5 @@ def reset_token(token):
         user.password = hashed_password
         db.session.commit()
         flash('Your password has been updated! You are now able to log in', 'success')
-        return redirect(url_for('users.login'))
+        return redirect(url_for('main.home'))
     return render_template('reset_token.html', title='Reset Password', form=form)

@@ -1,5 +1,80 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Wicked Weed</h1>
-    <h3>Forecasting Resources</h3>
+  <div class="content-section">
+    <legend class="border-bottom mb-4">{{ legend }}</legend>
+    <div class="row">
+      <div class="col-sm">
+        {% if current_user.is_authenticated %}
+          <h6>To Do</h6>
+          <ul>
+            <li>Complete "Remove PDCN pair" functionality</li>
+            <li>Add WSLR group functionality</li>
+            <ul>
+              <li>Provide five text fields</li>
+              <li>For x in list not null, concat and add to db</li>
+              <ul>
+                <li>"10995, 10900" : "10995"</li>
+                <li>"10995, 10900" : "10900"</li>
+              </ul>
+            </ul>
+            <li>Rebuild Forecast Helper Report Generator</li>
+            <ul>
+              <li>Save files to temp folder before working</li>
+              <li>Remove once report is generated</li>
+            </ul>
+            <li>Complete database architecture plan</li>
+            <li>Add some users</li>
+            <li>FAQ</li>
+            <li>Detailed instructions with screenshots and report configurations</li>
+            <li>Video trainings</li>
+          </ul>
+        {% else %}
+          <div class="col-md-4">
+            <form method="POST" action="">
+              {{ form.hidden_tag() }}
+              <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Log In</legend>
+                <div class="form-group">
+                  {{ form.email.label(class="form-control-label") }}
+                  {% if form.email.errors %}
+                  {{ form.email(class="form-control form-control-sm is-invalid") }}
+                  <div class="invalid-feedback">
+                    {% for error in form.email.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                  {% else %}
+                  {{ form.email(class="form-control form-control-sm") }}
+                  {% endif %}
+                </div>
+                <div class="form-group">
+                  {{ form.password.label(class="form-control-label") }}
+                  {% if form.password.errors %}
+                  {{ form.password(class="form-control form-control-sm is-invalid") }}
+                  <div class="invalid-feedback">
+                    {% for error in form.password.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                  {% else %}
+                  {{ form.password(class="form-control form-control-sm") }}
+                  {% endif %}
+                </div>
+                <div class="form-check">
+                  {{ form.remember(class="form-check-input") }}
+                  {{ form.remember.label(class="form-check-label") }}
+                </div>
+              </fieldset>
+              <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+                <small class="text-muted ml-2">
+                  <a href="{{ url_for('users.reset_request') }}">Forgot Password?</a>
+                </small>
+              </div>
+            </form>
+          </div>
+          {% endif %}
+      </div>
+    </div>
+  </div>
 {% endblock content %}
