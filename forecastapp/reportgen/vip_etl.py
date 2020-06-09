@@ -14,7 +14,7 @@ from forecastapp.reportgen import utils
 # get the date list earlier than I am now, which is in the reportUnits portion.
 # Then run nearest on
 
-def merge_data_vip( cleaned):
+def merge_data_vip(cleaned):
     merged_data = []
     for row in cleaned:
         for x in merged_data:
@@ -28,21 +28,7 @@ def merge_data_vip( cleaned):
 
     return merged_data
 
-# def merge_whs_num( wslr_id):
-#     for x, y in utils.wslr_info.items():
-#         """Identifies which wholesaler warehouses need to be merged
-#             from preset dictionary called wslr_info. May eventually allow user
-#             input for this feature, or draw from a csv file instead of
-#             building into the script itself."""
-#         if wslr_id not in y:
-#             continue
-#         else:
-#             #row[0] = str(x).upper()
-#             wslr_id = ', '.join(map(str, y))
-#             break
-#     return wslr_id
-
-def vip_clean():
+def vip_clean(vip_input):
     vip_cleaned = []
     with open(vip_input, "r", newline = "") as input_file:
         reader = csv.reader(input_file)
