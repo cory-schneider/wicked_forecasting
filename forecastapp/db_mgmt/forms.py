@@ -13,4 +13,4 @@ class PdcnMergeAdd(FlaskForm):
     def validate_pdcnAlt(self, pdcnAlt):
         alternate = MergedPdcn.query.filter_by(pdcnAlt=pdcnAlt.data).first()
         if alternate:
-            raise ValidationError('You''ve already added that alternate PDCN.')
+            raise ValidationError('That alternate PDCN already exists in the database.')

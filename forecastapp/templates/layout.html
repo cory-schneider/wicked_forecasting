@@ -25,20 +25,24 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
+            {% if current_user.is_authenticated %}
             <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{{ url_for('db_mgmt.db_manager') }}">Database Manager</a>
               <a class="nav-item nav-link" href="{{ url_for('main.messages') }}">Messages</a>
               <a class="nav-item nav-link" href="{{ url_for('main.about') }}">About</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
-              {% if current_user.is_authenticated %}
-              <a class="nav-item nav-link" href="{{ url_for('posts.new_post') }}">New Post</a>
-                <a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
-                <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
-              {% else %}
-                <a class="nav-item nav-link" href="{{ url_for('users.login') }}">Login</a>
-                <a class="nav-item nav-link" href="{{ url_for('users.register') }}">Register</a>
-              {% endif %}
+              <a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
+              <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
+            </div>
+            {% else %}
+              <!-- Navbar Right Side -->
+              <div class="navbar-nav ml-auto">
+              <!-- Add Popup displaying instructions to gain access -->
+                <a class="nav-item nav-link" href="#">Unauthorized Access Prohibited</a>
+              </div>
+            {% endif %}
             </div>
           </div>
         </div>
@@ -46,7 +50,7 @@
     </header>
     <main role="main" class="container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-9">
           {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
               {% for category, message in messages %}
@@ -58,17 +62,61 @@
           {% endwith %}
           {% block content %}{% endblock %}
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="content-section">
-            <h3>Our Sidebar</h3>
-            <p class='text-muted'>You can put any information here you'd like.
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Latest Posts</li>
-                <li class="list-group-item list-group-item-light">Announcements</li>
-                <li class="list-group-item list-group-item-light">Calendars</li>
-                <li class="list-group-item list-group-item-light">etc</li>
+            {% if current_user.is_authenticated %}
+            <legend class="">{{ current_user.username }}</legend>
+            <p class="">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="{{ url_for('posts.new_post') }}">Write Message</a></li>
+                <li class="list-group-item">Instructions/Training</li>
+                <li class="list-group-item"><a href="{{ url_for('users.account') }}">User Account</a></li>
               </ul>
             </p>
+            {% else %}
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Log In</legend>
+                    <div class="form-group">
+                        {{ form.email.label(class="form-control-label") }}
+                        {% if form.email.errors %}
+                            {{ form.email(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.email.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.email(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.password.label(class="form-control-label") }}
+                        {% if form.password.errors %}
+                            {{ form.password(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.password.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.password(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-check">
+                        {{ form.remember(class="form-check-input") }}
+                        {{ form.remember.label(class="form-check-label") }}
+                    </div>
+                  </fieldset>
+                  <div class="form-group">
+                      {{ form.submit(class="btn btn-outline-info") }}
+                      <small class="text-muted ml-2">
+                          <a href="{{ url_for('users.reset_request') }}">Forgot Password?</a>
+                      </small>
+                  </div>
+              </form>
+            {% endif %}
           </div>
         </div>
       </div>
