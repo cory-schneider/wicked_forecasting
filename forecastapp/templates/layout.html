@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 
@@ -27,20 +27,17 @@
           <div class="collapse navbar-collapse" id="navbarToggle">
             {% if current_user.is_authenticated %}
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{{ url_for('db_mgmt.db_manager') }}">Database Manager</a>
-              <a class="nav-item nav-link" href="{{ url_for('main.messages') }}">Messages</a>
               <a class="nav-item nav-link" href="{{ url_for('main.about') }}">About</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
-              <a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
               <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
             </div>
             {% else %}
               <!-- Navbar Right Side -->
               <div class="navbar-nav ml-auto">
               <!-- Add Popup displaying instructions to gain access -->
-                <a class="nav-item nav-link" href="#">Unauthorized Access Prohibited</a>
+                <a class="nav-item nav-link" href="#">Click to Request Access</a>
               </div>
             {% endif %}
             </div>
@@ -65,14 +62,35 @@
         <div class="col-md-3">
           <div class="content-section">
             {% if current_user.is_authenticated %}
-            <legend class="">{{ current_user.username }}</legend>
-            <p class="">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="{{ url_for('posts.new_post') }}">Write Message</a></li>
-                <li class="list-group-item">Instructions/Training</li>
-                <li class="list-group-item"><a href="{{ url_for('users.account') }}">User Account</a></li>
-              </ul>
-            </p>
+            <p class="font-weight-normal">{{ current_user.username }} <a href="{{ url_for('users.account') }}">(account)</a></p>
+
+            <div class="btn-group dropleft btn-block">
+              <button type="button" class="btn btn-secondary btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Messaging
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ url_for('main.messages') }}">Messages</a>
+                <a class="dropdown-item" href="{{ url_for('posts.new_post') }}">Write Message</a>
+              </div>
+            </div>
+            <div class="btn-group dropleft btn-block">
+              <button type="button" class="btn btn-secondary btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Reports & DB
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ url_for('reportgen.report_generator') }}">Forecast Report Generator</a>
+                <a class="dropdown-item" href="{{ url_for('db_mgmt.db_manager') }}">Database Manager</a>
+              </div>
+            </div>
+            <div class="btn-group dropleft btn-block">
+              <button type="button" class="btn btn-secondary btn-sm dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Instructions & Training
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">FAQ</a>
+                <a class="dropdown-item" href="#">Video Trainings</a>
+              </div>
+            </div>
             {% else %}
             <form method="POST" action="">
                 {{ form.hidden_tag() }}
@@ -125,8 +143,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>

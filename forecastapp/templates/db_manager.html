@@ -1,14 +1,50 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="content-section">
-        <legend class="border-bottom mb-4">{{ legend }}</legend>
-          <div class="row mb-3">
-            <div class="col-md-4 themed-grid-col">
-              <a class="mr-2" href="{{ url_for('db_mgmt.pdcn_merge_add') }}">Add PDCN Merge</a><br>
-              <a class="mr-2" href="{{ url_for('db_mgmt.pdcn_merge_remove') }}">Remove PDCN Merge</a>
-            </div>
-            <div class="col-md-4 themed-grid-col">.col-md-4</div>
-            <div class="col-md-4 themed-grid-col">.col-md-4</div>
-          </div>
+  <div class="content-section">
+    <legend class="border-bottom mb-4">{{ legend }}</legend>
+    <div class="row">
+      <div class="col-sm">
+        <button type="button" class="btn btn-secondary btn-sm btn-block font-weight-bold">
+          PDCN Merging
+        </button>
+        <div>
+            <a class="dropdown-item" href="{{ url_for('db_mgmt.pdcn_merge_remove') }}">List all PDCN Pairs</a>
+            <a class="dropdown-item" href="{{ url_for('db_mgmt.pdcn_merge_add') }}">Add PDCN Pair</a>
+            <a class="dropdown-item" href="{{ url_for('db_mgmt.pdcn_merge_remove') }}">Remove PDCN Pairs</a>
+        </div>
       </div>
+      <div class="col-sm">
+        <button type="button" class="btn btn-secondary btn-sm btn-block font-weight-bold">
+          WSLR Merging
+        </button>
+        <div>
+            <a class="dropdown-item" href="#">List all WSLR Groups</a>
+            <a class="dropdown-item" href="#">Add WSLR Group</a>
+            <a class="dropdown-item" href="#">Remove WSLR Groups</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <button type="button" class="btn btn-secondary btn-sm btn-block font-weight-bold">
+          Product Info
+        </button>
+        <div>
+            <a class="dropdown-item" href="#">List all PDCN Pairs</a>
+            <a class="dropdown-item" href="#">Add PDCN Pair</a>
+            <a class="dropdown-item" href="#">Remove PDCN Pairs</a>
+        </div>
+      </div>
+      <div class="col-sm">
+        <button type="button" class="btn btn-secondary btn-sm btn-block font-weight-bold">
+          Ordering
+        </button>
+        <div>
+            <a class="dropdown-item" href="#">List all WSLR Groups</a>
+            <a class="dropdown-item" href="#">Add WSLR Group</a>
+            <a class="dropdown-item" href="#">Remove WSLR Groups</a>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock content %}
