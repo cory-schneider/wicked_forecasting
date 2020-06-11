@@ -143,3 +143,29 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting
 INFO:root:User ran a report which completed successfully: Report Instance('corybschneider@gmail.com', '2020-06-10 22:58:32.337257' '1')
 INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 22:58:32] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:15:09] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:root:User ran a report which completed successfully: Report Instance('corybschneider@gmail.com', '2020-06-10 23:15:17.961640' '1')
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:15:18] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:15:20] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:root:User ran a report which completed successfully: Report Instance('corybschneider@gmail.com', '2020-06-10 23:15:59.371918' '1')
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:15:59] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:19:11] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:root:User ran a report which completed successfully: Report Instance('corybschneider@gmail.com', '2020-06-10 23:19:12.258173' '1')
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:19:12] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:19:22] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:root:User ran a report which completed successfully: Report Instance('corybschneider@gmail.com', '2020-06-10 23:22:40.867820' '1')
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:22:41] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:22:42] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading

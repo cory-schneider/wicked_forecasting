@@ -26,7 +26,7 @@ def oneportal_clean(forecast_report):
     last_friday = forecast_report.last_friday
     date_list.append(last_friday)
 
-    with open(forecast_report.oneportal_file, 'r', newline = "") as input_file:
+    with open(forecast_report.oneportal_path, 'r', newline = "") as input_file:
         reader = csv.reader(input_file, delimiter = ",")
         next(reader)
 

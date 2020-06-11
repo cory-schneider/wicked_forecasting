@@ -21,32 +21,28 @@ reportgen = Blueprint('reportgen', __name__)
 def report_generator():
     form = ReportGeneratorForm()
     if form.validate_on_submit():
+# Saving CSV files to temp folder and creating path variables
         vip_path = save_csv(form.vip_input.data)
         oneportal_path = save_csv(form.oneportal_input.data)
         changelog_path = save_csv(form.changelog_input.data)
-
+# Creating a class instance with path variables
         forecast_report = ForecastHelper(vip_path, oneportal_path, changelog_path)
-        
+# Data cleaning
         vip_cleaned_list = vip_clean(forecast_report)
         oneportal_cleaned_list = oneportal_clean(forecast_report)
         changelog_cleaned_list, changelog_problems, ticket_count = \
             changelog_clean(forecast_report)
-
-        print(f"THIS IS THE TICKET COUNT {ticket_count}")
-
+# Saving output files for user download
         output_fn = os.path.join(current_app.root_path, 'temp', "vip_out.csv")
         save_input_report(oneportal_cleaned_list, output_fn)
-
+# Removing temp files
         temp_files = [vip_path, oneportal_path, changelog_path]
         for file in temp_files:
             os.remove(file)
-# Marks the report creation process as complete.
+# Marking the report creation process as complete for logging.
         forecast_report.complete = 1
         logging.info('User ran a report which completed successfully: ' + str(forecast_report))
-        # return send_file(vip_fn,
-        #                 mimetype="text/csv",
-        #                 attachment_filename='vip_out.csv',
-        #                 as_attachment=True)
+
         return render_template('testgen.html',
                         testing=changelog_problems, output_fn=output_fn)
 

@@ -27,7 +27,7 @@ def merge_data_vip(cleaned):
 
 def vip_clean(forecast_report):
     vip_cleaned = []
-    with open(forecast_report.vip_file, "r", newline = "") as input_file:
+    with open(forecast_report.vip_path, "r", newline = "") as input_file:
         reader = csv.reader(input_file, delimiter = ",")
         next(reader)
         vip_test = []

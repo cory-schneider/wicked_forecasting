@@ -48,7 +48,7 @@ def changelog_clean(forecast_report):
     changelog_list = []
     date_list = forecast_report.date_list
 
-    with open(forecast_report.changelog_file, 'r', newline = "") as input_file:
+    with open(forecast_report.changelog_path, 'r', newline = "") as input_file:
         changelog_reader = csv.reader(input_file, delimiter = ",")
         for row in changelog_reader:
             orig_week = date_reformat_changelog(row[1])
