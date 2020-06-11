@@ -1,5 +1,6 @@
 import math
 import os
+import csv
 import secrets
 from flask import current_app
 
@@ -106,11 +107,11 @@ def round_up(n, decimals=1):
     return math.ceil(n * multiplier)/ multiplier
 
 def merge_wslr(wslr_id):
+    """Identifies which wholesaler warehouses need to be merged
+    from preset dictionary called wslr_info. May eventually allow user
+    input for this feature, or draw from a csv file instead of
+    building into the script itself."""
     for x, y in wslr_info.items():
-        """Identifies which wholesaler warehouses need to be merged
-            from preset dictionary called wslr_info. May eventually allow user
-            input for this feature, or draw from a csv file instead of
-            building into the script itself."""
         if wslr_id not in y:
             continue
         else:
@@ -121,6 +122,9 @@ def merge_wslr(wslr_id):
     return wslr_id
 
 def save_csv(form_csv):
+    """
+    Saves csv file to user's temporary folder and returns the full file path.
+    """
     random_hex = secrets.token_hex(8)
     _, f_ext = os.path.splitext(form_csv.filename)
     csv_fn = random_hex + f_ext
@@ -129,3 +133,12 @@ def save_csv(form_csv):
     form_csv.save(csv_path)
 
     return csv_path
+
+def save_input_report(list, output_fn):
+    """
+    Saves cleaned base reports. Takes a list and outputs csv.
+    """
+    with open(output_fn, 'w', newline='') as output_file:
+        writer = csv.writer(output_file)
+        for row in list:
+            writer.writerow(row)

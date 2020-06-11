@@ -1,0 +1,20 @@
+def addNumbers(a, b):
+    try:
+        return a + b
+    except Exception as e:
+        return 'Error occurred : ' + str(e)
+
+print addNumbers('', 10)
+
+A 'finally' block instructs the program as to any last items that need to be
+cleaned up in the event of an error that causes the program to fail when
+only partially executed.
+
+try:
+    filePointer = open('fname','r')
+    try:
+        content = filePointer.readline()
+    finally:
+        filePointer.close()
+except IOError as e:
+    print str(e)

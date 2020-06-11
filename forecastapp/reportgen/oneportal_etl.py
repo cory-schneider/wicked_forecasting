@@ -1,24 +1,32 @@
+from datetime import datetime, date, timedelta
+import datetime as dt
+import dateutil.parser
+import csv
+import os
+from collections import defaultdict
 from forecastapp.reportgen import utils
+from flask import (current_app)
 
-def oneportal_pdcn(y):
+def oneportal_pdcn(oneportal_data):
     """Merges order quantities for PDCN/order date in cases where warehouses
     share/transfer inventory"""
-    combined_data = []
-    for row in y:
-        for x in combined_data:
+    oneportal_merged_wslrs = []
+    for row in oneportal_data:
+        for x in oneportal_merged_wslrs:
             if row[1] == x[1] and row[2] == x[2] and row[4] == x[4]:
                 row[3] += x[3]
-                combined_data.remove(x)
-        combined_data.append(row)
-    combined_data = sorted(combined_data)
-    return combined_data
+                oneportal_merged_wslrs.remove(x)
+        oneportal_merged_wslrs.append(row)
+    oneportal_merged_wslrs = sorted(oneportal_merged_wslrs)
+    return oneportal_merged_wslrs
 
-def nearest(dates, truck):
-    return min([i for i in dates[1:] if i < truck], key=lambda x: abs(x - truck))
-
-def oneportal_clean():
+def oneportal_clean(forecast_report):
     oneportal_cleaned = []
-    with open(oneportal_input, 'r', newline = "") as input_file:
+    date_list = []
+    last_friday = forecast_report.last_friday
+    date_list.append(last_friday)
+
+    with open(forecast_report.oneportal_file, 'r', newline = "") as input_file:
         reader = csv.reader(input_file, delimiter = ",")
         next(reader)
 
@@ -41,6 +49,9 @@ def oneportal_clean():
             delivery_date = delivery_date - dt.timedelta(days=delivery_date.weekday())
             wslr_contact = str(row[7])
 
+            if delivery_date not in date_list:
+                date_list.append(delivery_date)
+
             oneportal_cleaned.append([
                 wholesaler,
                 wholesaler_id,
@@ -51,13 +62,15 @@ def oneportal_clean():
 
     oneportal_cleaned = oneportal_pdcn(oneportal_cleaned)
 
+    forecast_report.date_list = date_list
+
 # Create a dictionary of email addresses for each wslr
-    email_dict = defaultdict(list)
-    for row in oneportal_cleaned:
-        wslr_id = row[1]
-        email = row[-1]
-        if email not in email_dict[wslr_id]:
-            email_dict[wslr_id].append(email)
+    # email_dict = defaultdict(list)
+    # for row in oneportal_cleaned:
+    #     wslr_id = row[1]
+    #     email = row[-1]
+    #     if email not in email_dict[wslr_id]:
+    #         email_dict[wslr_id].append(email)
 
     # email_set = set(email_dict)
     # unique_emails = list(email_set)
@@ -72,11 +85,4 @@ def oneportal_clean():
                     ]
     oneportal_cleaned.insert(0, bi_header)
 
-    output_filename = "/forecasting/oneportal_output" + str(today) + ".csv"
-
-    with open(output_filename, 'w', newline = '') as output:
-        writer = csv.writer(output)
-        for i in oneportal_cleaned:
-            writer.writerow(i)
-
-    return oneportal_cleaned, email_dict
+    return oneportal_cleaned

@@ -1,99 +1,6 @@
 from forecastapp.reportgen import utils
 
-def order_date_lister(oneportal_data):
-    date_list = []
-    header = oneportal_data[0]
-    date_index = header.index("Delivery Date")
-    # loops through each row of the forecasting report to find unique order
-    # dates. Skips header line.
-    for row in oneportal_data[1:]:
-        date = row[date_index]
-        if date in date_list:
-            continue
-        else:
-            date_list.append(date)
-    # Sort date list chronologically, then adds today's date at the top for
-    # initial inventory value
-    date_list = sorted(date_list)
-    date_report_pulled = datetime.date(datetime(2020, 5, 29))
-    date_list.insert(0, date_report_pulled)
-
-    return date_list
-
-def date_reformat_changelog(date):
-    date_split = date.split("/")
-    y = int(date_split[2])
-    m = int(date_split[0])
-    d = int(date_split[1])
-    new_date = datetime.date(datetime(y, m, d))
-
-    return new_date
-
-def nearest(dates, truck):
-    return min([i for i in dates[1:] if i < truck], key=lambda x: abs(x - truck))
-
-def changelog_adjustments(changelog_list, date_list):
-    ticket_counter = 0
-    changelog_samedate = []
-    changelog_diffdate = []
-
-# split the change log list into changes that affect a single date and those that
-# shift order date
-    for ticket in changelog_list:
-        chg_log_orig_date = ticket[0]
-        chg_log_new_date = ticket[4]
-# First if statement ensures no old tickets make it into changelog lists.
-        if chg_log_new_date >= date_list[1]:
-            ticket_counter += 1
-            if chg_log_orig_date == chg_log_new_date:
-                changelog_samedate.append(ticket)
-            else:
-                changelog_diffdate.append(ticket)
-
-# The following for loops "round down" the ship weeks in cases where a date
-# other than Monday was errantly typed into the change log
-    for ticket in changelog_samedate:
-        orig_ship_week = ticket[0]
-        new_ship_week = ticket[4]
-        if orig_ship_week not in date_list:
-            ticket[0] = nearest(date_list, orig_ship_week)
-        if new_ship_week not in date_list:
-            ticket[4] = nearest(date_list, new_ship_week)
-
-    # for ticket in changelog_diffdate:
-        # orig_ship_week = ticket[0]
-        # new_ship_week = ticket[4]
-        # if orig_ship_week not in date_list:
-        #     ticket[0] = nearest(date_list, orig_ship_week)
-        # if new_ship_week not in date_list:
-        #     ticket[4] = nearest(date_list, new_ship_week)
-
-    return changelog_samedate, changelog_diffdate, ticket_counter
-
 def merged_units():
-    changelog_list = []
-    with open(changelog_file, 'r', newline = "") as log_input_file:
-        changelog_reader = csv.reader(log_input_file, delimiter = ",")
-        for row in changelog_reader:
-            orig_week = date_reformat_changelog(row[1])
-            try:
-                wslr_id = int(row[2])
-            except:
-                wslr_id = int(''.join([i for i in row[2] if i.isdigit()]))
-            wslr_id = utils.merge_wslr(wslr_id)
-            pdcn = str(row[3]).upper()
-            pdcn = utils.pdcn_cleanup(pdcn)
-            orig_qty = int(row[4])
-            new_qty = int(row[5])
-            order_adjustment = new_qty - orig_qty
-            new_week = date_reformat_changelog(row[6])
-            changelog_list.append([
-                    orig_week,
-                    wslr_id,
-                    pdcn,
-                    order_adjustment,
-                    new_week])
-
 # Makes a list of dates based on initial inventory date and all dates in range
 # given by the One Portal report.
     date_list = order_date_lister(oneportal_data)
@@ -209,6 +116,9 @@ def doh_calc_excel_formulas(report_units, date_list):
     header = report_units.pop(0)
     ros_index = header.index("DAILY ROS (60 day period)")
 
+# Starting row in the spreadsheet for WSLR/ITEM combos.
+    row_count = 3
+
     for row in report_units:
         ooc_flag = False
         new_row = []
@@ -260,9 +170,6 @@ def doh_calc_excel_formulas(report_units, date_list):
             new_row.append(order)
             new_row.append("")
             new_row.append("")
-# Tacks on an out of code warning if ROS is zero for reporting period
-        if ooc_flag == True:
-            new_row.append("Rate of Sale is zero. Check dates!")
 
         doh_report.append(new_row)
 

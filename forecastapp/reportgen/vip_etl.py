@@ -1,13 +1,10 @@
-from datetime import datetime, date, timedelta
 import datetime as dt
 import numpy as np
 import math
 import csv
 import sys
-import dateutil.parser
 import os
-from flask import (flash)
-from collections import defaultdict
+from flask import (current_app)
 from forecastapp.reportgen import utils
 
 # In order to use the nearest function on the OnePortal report, I'll have to
@@ -28,11 +25,12 @@ def merge_data_vip(cleaned):
 
     return merged_data
 
-def vip_clean(vip_input):
+def vip_clean(forecast_report):
     vip_cleaned = []
-    with open(vip_input, "r", newline = "") as input_file:
-        reader = csv.reader(input_file)
+    with open(forecast_report.vip_file, "r", newline = "") as input_file:
+        reader = csv.reader(input_file, delimiter = ",")
         next(reader)
+        vip_test = []
 
         for row in reader:
 # Likely I should change this try except to something more specific to the
@@ -71,14 +69,7 @@ def vip_clean(vip_input):
             "WSLR ID",
             "Product - PDCN",
             "DAILY ROS (60 day period)",
-            datetime.date(datetime(2020, 5, 29))]
+            forecast_report.last_friday]
     vip_merged.insert(0, vip_header)
-
-    output_filename = "/forecasting/vip_output" + str(today) + ".csv"
-
-    with open(output_filename, 'w', newline='') as output_file:
-        writer = csv.writer(output_file)
-        for i in vip_merged:
-            writer.writerow(i)
 
     return vip_merged
