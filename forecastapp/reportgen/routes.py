@@ -8,6 +8,7 @@ from forecastapp.reportgen.models import ForecastHelper
 from forecastapp.reportgen.vip_etl import vip_clean
 from forecastapp.reportgen.oneportal_etl import oneportal_clean
 from forecastapp.reportgen.changelog_etl import changelog_clean
+from forecastapp.reportgen.merge_reports import merged_units, doh_calc_excel_formulas
 import os
 import csv
 import logging
@@ -32,6 +33,12 @@ def report_generator():
         oneportal_cleaned_list = oneportal_clean(forecast_report)
         changelog_cleaned_list, changelog_problems, ticket_count = \
             changelog_clean(forecast_report)
+# Report merging
+        inventory_and_orders_units = \
+            merged_units(vip_cleaned_list, oneportal_cleaned_list, \
+            changelog_cleaned_list, forecast_report.date_list)
+        merged_doh = doh_calc_excel_formulas(inventory_and_orders_units, \
+             forecast_report)
 # Saving output files for user download
         output_fn = os.path.join(current_app.root_path, 'temp', "vip_out.csv")
         save_input_report(oneportal_cleaned_list, output_fn)
@@ -44,7 +51,7 @@ def report_generator():
         logging.info('User ran a report which completed successfully: ' + str(forecast_report))
 
         return render_template('testgen.html',
-                        testing=changelog_problems, output_fn=output_fn)
+                        testing=merged_doh, output_fn=output_fn)
 
     return render_template('report_generator.html', title='Forecast Helper Report Generator',
     form=form, legend='Forecast Helper Report Generator')

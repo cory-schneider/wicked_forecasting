@@ -1,22 +1,29 @@
 from forecastapp.reportgen import utils
 
-def merged_units():
-# Makes a list of dates based on initial inventory date and all dates in range
-# given by the One Portal report.
-    date_list = order_date_lister(oneportal_data)
 
-    changelog_samedate, changelog_diffdate, ticket_counter = \
-    changelog_adjustments(changelog_list, date_list)
+def unique(wslr_list):
+    # insert the list into a set
+    list_set = set(wslr_list)
+    # convert the set to the list
+    unique_list = list(list_set)
+    return unique_list
 
-    print(f"There are {ticket_counter} tickets in play.")
-    print(f"There are {len(changelog_diffdate)} tickets with date changes.")
-    print("These are:")
-    print([i for i in changelog_diffdate])
+def pdcn_plus_product_name(doh_report):
+    for row in doh_report:
+        pdcn = row[3]
+        for x, y in utils.product_names.items():
+            if pdcn not in y:
+                continue
+            else:
+                row[3] = str(x) + " - " + str(y)
+                break
+    return doh_report
 
-
+def merged_units(vip_cleaned_list, oneportal_cleaned_list, \
+                 changelog_cleaned_list, date_list):
     units_report = []
 
-    vip_header = vip_data[0]
+    vip_header = vip_cleaned_list[0]
     merged_header = vip_header
     for i in date_list[1:]:
         merged_header.append(i)
@@ -24,7 +31,7 @@ def merged_units():
 # Write a row for each wholesaler inventory item. Merged report will exclude
 # PDCNs which are forecasted but don't have sales history/aren't in VIP report.
 # Writes WSLR, WSLR ID, PDCN, ROS, Current inventory.
-    for vip_row in vip_data[1:]:
+    for vip_row in vip_cleaned_list[1:]:
         new_row = []
         for i in vip_row:
             new_row.append(i)
@@ -38,7 +45,7 @@ def merged_units():
 # Indexing within the One Portal report. This is to account for changes in
 # output format. Likely unnecessary and is a trade-off because changing
 # verbiage will break the program, too.
-    bi_header = oneportal_data[0]
+    bi_header = oneportal_cleaned_list[0]
     oneportal_delivery_index = bi_header.index("Delivery Date")
     oneportal_qty_index = bi_header.index("Order Qty.")
     oneportal_wslr_index = bi_header.index("WSLR ID")
@@ -52,7 +59,7 @@ def merged_units():
 # Tracking efficiency by counting the loops. Working on this...
     count = 0
     for r in units_report:
-        for oneportal_row in oneportal_data:
+        for oneportal_row in oneportal_cleaned_list:
             count += 1
             if oneportal_row[oneportal_wslr_index] == r[merged_wslr_index] and \
                 oneportal_row[oneportal_pdcn_index] == r[merged_pdcn_index]:
@@ -67,8 +74,8 @@ def merged_units():
 
     vip_wslr_id_index = vip_header.index("WSLR ID")
     vip_pdcn_index = vip_header.index("Product - PDCN")
-# Making Adjustments to the report based on changelog_samedate
-    for ticket in changelog_samedate:
+# Making Adjustments to the report based on changelog_cleaned_list
+    for ticket in changelog_cleaned_list:
         ticket_wslr_id = ticket[1]
         ticket_pdcn = ticket[2]
         adjustment_amount = ticket[3]
@@ -84,27 +91,11 @@ def merged_units():
 
     units_report.insert(0, merged_header)
 
-    output_filename = "/forecasting/report_units" + str(today) + ".csv"
+    return units_report
 
-    with open(output_filename, 'w', newline = '') as file:
-        writer = csv.writer(file)
-        for i in units_report:
-            writer.writerow(i)
-
-    return units_report, date_list
-
-def pdcn_plus_product_name(doh_report):
-    for row in doh_report:
-        pdcn = row[3]
-        for x, y in utils.product_names.items():
-            if pdcn not in y:
-                continue
-            else:
-                row[3] = str(x) + " - " + str(y)
-                break
-    return doh_report
-
-def doh_calc_excel_formulas(report_units, date_list):
+def doh_calc_excel_formulas(report_units, forecast_report):
+    date_list = forecast_report.date_list
+    today = forecast_report.today
     days_between_orders = []
     for i in range(len(date_list) - 1):
         this_day = date_list[i]
@@ -215,18 +206,4 @@ def doh_calc_excel_formulas(report_units, date_list):
     doh_report.insert(0, header_labels)
     doh_report.insert(0, header_dates)
 
-    output_filename = "/forecasting/report_doh" + str(today) + ".csv"
-
-    with open(output_filename, 'w', newline = '') as file:
-        writer = csv.writer(file)
-        for i in doh_report:
-            writer.writerow(i)
-
     return doh_report
-
-def unique(wslr_list):
-# insert the list into a set
-list_set = set(wslr_list)
-# convert the set to the list
-unique_list = list(list_set)
-return unique_list

@@ -169,3 +169,86 @@ INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:22:42] "[37mGET /report_generator H
 INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:09] "[35m[1mPOST /report_generator HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:09] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:10] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:10] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:10] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:10] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:10] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:11] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:13] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:37] "[35m[1mPOST /report_generator HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:37] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:37] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:37] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:37] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:37] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:38] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:root:User ran a report which completed successfully: Report Instance('corybschneider@gmail.com', '2020-06-10 23:35:51.978798' '1')
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:35:52] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:36:25] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:root:User ran a report which completed successfully: Report Instance('corybschneider@gmail.com', '2020-06-10 23:36:26.837698' '1')
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:36:27] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:37:55] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:37:56] "[35m[1mPOST /report_generator HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:37:57] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:37:57] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:37:57] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:37:57] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:37:57] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:37:57] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:38:09] "[35m[1mPOST /report_generator HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:38:09] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:38:09] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:38:09] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:38:09] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:38:09] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:38:10] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\merge_reports.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:39:09] "[35m[1mPOST /report_generator HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:39:09] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:39:09] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:39:09] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:39:10] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:39:10] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:39:10] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\merge_reports.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\merge_reports.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\merge_reports.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\merge_reports.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:40:31] "[35m[1mPOST /report_generator HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:40:31] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:40:31] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:40:31] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:40:32] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:40:32] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:40:32] "[37mGET /report_generator?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\merge_reports.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:root:User ran a report which completed successfully: Report Instance('corybschneider@gmail.com', '2020-06-10 23:40:44.183006' '1')
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2020 23:40:44] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
