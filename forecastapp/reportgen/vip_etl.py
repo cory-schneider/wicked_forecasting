@@ -1,4 +1,5 @@
 import datetime as dt
+from datetime import datetime
 import numpy as np
 import math
 import csv
@@ -69,7 +70,10 @@ def vip_clean(forecast_report):
             "WSLR ID",
             "Product - PDCN",
             "DAILY ROS (60 day period)",
-            forecast_report.last_friday]
+            # CHANGE THIS FOR THE LOVE OF GOD
+            datetime.date(datetime(2020, 6, 5))]
+
+            # forecast_report.last_friday]
     vip_merged.insert(0, vip_header)
 
     return vip_merged

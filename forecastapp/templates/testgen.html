@@ -1,7 +1,0 @@
-{% extends "layout.html" %}
-{% block content %}
-    <a href="{{ url_for('reportgen.send_csv', output_fn=output_fn) }}">Download</a><br>
-    {% for line in testing %}
-      {{ line }}<br>
-    {% endfor %}
-{% endblock content %}

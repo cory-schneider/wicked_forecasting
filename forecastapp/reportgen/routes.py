@@ -1,14 +1,14 @@
 from flask import (render_template, request, Blueprint, send_file, current_app)
 from flask_login import login_user, current_user, logout_user, login_required
 from forecastapp.reportgen.forms import ReportGeneratorForm
-from datetime import datetime, date as dt
+import datetime
 from dateutil.relativedelta import relativedelta, FR
-from forecastapp.reportgen.utils import save_csv, save_input_report
+from forecastapp.reportgen.utils import save_csv, save_report_csv
 from forecastapp.reportgen.models import ForecastHelper
 from forecastapp.reportgen.vip_etl import vip_clean
 from forecastapp.reportgen.oneportal_etl import oneportal_clean
 from forecastapp.reportgen.changelog_etl import changelog_clean
-from forecastapp.reportgen.merge_reports import merged_units, doh_calc_excel_formulas
+from forecastapp.reportgen.merge_reports import merged_units, units_to_doh_excel
 import os
 import csv
 import logging
@@ -37,11 +37,10 @@ def report_generator():
         inventory_and_orders_units = \
             merged_units(vip_cleaned_list, oneportal_cleaned_list, \
             changelog_cleaned_list, forecast_report.date_list)
-        merged_doh = doh_calc_excel_formulas(inventory_and_orders_units, \
+        output_fn = units_to_doh_excel(inventory_and_orders_units, \
              forecast_report)
 # Saving output files for user download
-        output_fn = os.path.join(current_app.root_path, 'temp', "vip_out.csv")
-        save_input_report(oneportal_cleaned_list, output_fn)
+        # save_report_csv(merged_doh, output_fn)
 # Removing temp files
         temp_files = [vip_path, oneportal_path, changelog_path]
         for file in temp_files:
@@ -50,17 +49,19 @@ def report_generator():
         forecast_report.complete = 1
         logging.info('User ran a report which completed successfully: ' + str(forecast_report))
 
-        return render_template('testgen.html',
-                        testing=merged_doh, output_fn=output_fn)
+        return render_template('return_report.html',
+                        testing=changelog_problems, output_fn=output_fn)
 
-    return render_template('report_generator.html', title='Forecast Helper Report Generator',
-    form=form, legend='Forecast Helper Report Generator')
+    return render_template('report_generator.html', title='Forecast Report Generator',
+    form=form, legend='Forecast Report Generator')
 
-@reportgen.route('/send_csv') # this is a job for GET, not POST
+@reportgen.route('/send_xlsx')
 @login_required
-def send_csv():
+def send_xlsx():
     output_fn = request.args.get('output_fn', None)
+    today = datetime.date.today()
+    attachment_filename = str(today) + "-ForecastWorksheet.xlsx"
     return send_file(output_fn,
-                     mimetype='text/csv',
-                     attachment_filename='vip_out.csv',
+                     # mimetype='text/csv',
+                     attachment_filename=attachment_filename,
                      as_attachment=True)

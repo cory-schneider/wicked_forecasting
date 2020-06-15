@@ -134,7 +134,7 @@ def save_csv(form_csv):
 
     return csv_path
 
-def save_input_report(list, output_fn):
+def save_report_csv(list, output_fn):
     """
     Saves cleaned base reports. Takes a list and outputs csv.
     """

@@ -24,7 +24,9 @@ def oneportal_clean(forecast_report):
     oneportal_cleaned = []
     date_list = []
     last_friday = forecast_report.last_friday
-    date_list.append(last_friday)
+    # date_list.append(last_friday)
+    # CHANGE THIS FOR THE LOVE OF GOD
+    date_list.append(datetime.date(datetime(2020, 6, 5)))
 
     with open(forecast_report.oneportal_path, 'r', newline = "") as input_file:
         reader = csv.reader(input_file, delimiter = ",")
@@ -61,6 +63,8 @@ def oneportal_clean(forecast_report):
                 wslr_contact])
 
     oneportal_cleaned = oneportal_pdcn(oneportal_cleaned)
+
+    date_list = sorted(date_list)
 
     forecast_report.date_list = date_list
 

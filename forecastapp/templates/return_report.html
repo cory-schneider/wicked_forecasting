@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="{{ url_for('reportgen.send_xlsx', output_fn=output_fn) }}">Download .XLSX Forecast Worksheet</a><br>
+        </div>
+        <div class="col-md-9">
+          <p class="font-weight-normal"></p>
+          {% for line in testing %}
+            {{ line }}<br>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+{% endblock content %}
