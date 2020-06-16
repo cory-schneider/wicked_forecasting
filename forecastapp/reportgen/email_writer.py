@@ -3,9 +3,9 @@ import datetime as dt
 import os
 from flask import (current_app)
 
-def email_writer(report_units, forecast_report):
+def email_writer(report_units, advisor):
 
-    end_date = forecast_report.date_list[-1]
+    end_date = advisor.date_list[-1]
 
     opener = f"I’ve attached our weekly order tracker highlighting our \
 suggested tickets and orders through shipping week of {end_date}. The \
@@ -54,14 +54,14 @@ Thanks for your business!"
                 new_item = name_and_pdcn + " - "
                 item_list.append(new_item)
         email.append("Tickets Requested:")
-        for d in forecast_report.date_list[2:5]:
+        for d in advisor.date_list[2:5]:
             email.append(str(d) + ":")
             for i in item_list:
                 email.append(i)
             email.append("")
         email.append("")
         email.append("Orders Requested:")
-        for d in forecast_report.date_list[5:]:
+        for d in advisor.date_list[5:]:
             email.append(str(d) + ":")
             for i in item_list:
                 email.append(i)
@@ -71,7 +71,7 @@ Thanks for your business!"
         wslr_stripped = w[1].replace(" ", "").lower() + w[0].replace(", ", "")
 
         output_filename = str(today_date + wslr_stripped + ".txt")
-        dest_path = forecast_report.temp_report_path + "/" + output_filename
+        dest_path = advisor.temp_report_path + "/" + output_filename
 
         with open(dest_path, 'w+') as file:
             for i in email:

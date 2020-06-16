@@ -20,12 +20,12 @@ def oneportal_pdcn(oneportal_data):
     oneportal_merged_wslrs = sorted(oneportal_merged_wslrs)
     return oneportal_merged_wslrs
 
-def oneportal_clean(forecast_report):
+def oneportal_clean(advisor):
     oneportal_cleaned = []
     date_list = []
-    date_list.append(forecast_report.last_friday)
+    date_list.append(advisor.last_friday)
 
-    with open(forecast_report.oneportal_path, 'r', newline = "") as input_file:
+    with open(advisor.oneportal_path, 'r', newline = "") as input_file:
         reader = csv.reader(input_file, delimiter = ",")
         next(reader)
 
@@ -63,7 +63,7 @@ def oneportal_clean(forecast_report):
 
     date_list = sorted(date_list)
 
-    forecast_report.date_list = date_list
+    advisor.date_list = date_list
 
 # Create a dictionary of email addresses for each wslr
     # email_dict = defaultdict(list)

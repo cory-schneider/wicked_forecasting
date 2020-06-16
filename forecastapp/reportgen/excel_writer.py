@@ -9,14 +9,14 @@ import os
 from flask import (current_app)
 from forecastapp.reportgen.utils import unique
 
-def excel_writer(report_units, forecast_report):
+def excel_writer(report_units, advisor):
 
     wb = Workbook()
     ws1 = wb.active
     ws1.title = "ForecastWorksheet"
 
-    date_list = forecast_report.date_list
-    today = forecast_report.today
+    date_list = advisor.date_list
+    today = advisor.today
 
     header = report_units.pop(0)
 
@@ -173,7 +173,7 @@ def excel_writer(report_units, forecast_report):
         ws1.cell(row=2, column=col_n).alignment = Alignment(wrap_text=True)
         col_n += 1
 
-    dest_filename = forecast_report.temp_report_path + '/ForecastWorksheet.xlsx'
+    dest_filename = advisor.temp_report_path + '/ForecastWorksheet.xlsx'
     wb.save(filename = dest_filename)
 
     return dest_filename

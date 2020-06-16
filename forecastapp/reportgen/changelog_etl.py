@@ -11,11 +11,10 @@ def date_reformat_changelog(date):
 
     return new_date
 
-def changelog_clean(forecast_report):
+def changelog_clean(advisor):
     changelog = []
-    malformed_tickets = []
 
-    with open(forecast_report.changelog_path, 'r', newline = "") as input_file:
+    with open(advisor.changelog_path, 'r', newline = "") as input_file:
         changelog_reader = csv.reader(input_file, delimiter = ",")
 
         for row in changelog_reader:
@@ -23,16 +22,16 @@ def changelog_clean(forecast_report):
                 orig_week = date_reformat_changelog(row[1])
                 new_week = date_reformat_changelog(row[6])
             except:
-                row.append("Date Issue!")
-                malformed_tickets.append(row)
+                row.append("Date malformed or missing.")
+                advisor.malformed_tickets.append(row)
                 continue
 # Skip old tickets
-            if new_week < forecast_report.date_list[1]:
+            if new_week < advisor.date_list[1]:
                 continue
 # Add malformed tickets to a list for review
             if orig_week != new_week:
-                row.append("Dates don't match!")
-                malformed_tickets.append(row)
+                row.append("Dates don't match.")
+                advisor.malformed_tickets.append(row)
             else:
 # Begin forming the changelog
                 orig_week = utils.prev_monday(orig_week)
@@ -45,7 +44,7 @@ def changelog_clean(forecast_report):
                 orig_qty = int(row[4])
                 new_qty = int(row[5])
                 order_adjustment = new_qty - orig_qty
-                forecast_report.tickets += 1
+                advisor.tickets += 1
 
                 changelog.append([
                         orig_week,
@@ -54,7 +53,7 @@ def changelog_clean(forecast_report):
                         order_adjustment,
                         new_week])
 
-    return changelog, malformed_tickets
+    return changelog
 
 # Deprecated
 # def nearest(dates, truck):

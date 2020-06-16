@@ -25,32 +25,34 @@ def report_generator():
     form = ReportGeneratorForm()
     if form.validate_on_submit():
 # Creating a class instance
-        forecast_report = ForecastHelper(form)
+        advisor = ForecastHelper(form)
 # Data cleaning
-        vip_cleaned_list = vip_clean(forecast_report)
-        oneportal_cleaned_list = oneportal_clean(forecast_report)
-        changelog_cleaned_list, malformed_tickets = changelog_clean(forecast_report)
+        vip_cleaned_list = vip_clean(advisor)
+        oneportal_cleaned_list = oneportal_clean(advisor)
+        changelog_cleaned_list = changelog_clean(advisor)
 # Report merging
         inventory_and_orders_units = \
             merged_units(vip_cleaned_list, oneportal_cleaned_list, \
-            changelog_cleaned_list, forecast_report.date_list)
+            changelog_cleaned_list, advisor)
         output_fn = excel_writer(inventory_and_orders_units, \
-             forecast_report)
+             advisor)
         if form.email_toggle.data == True:
-            email_writer(inventory_and_orders_units, forecast_report)
+            email_writer(inventory_and_orders_units, advisor)
 # Removing temp files
-        temp_files = [forecast_report.vip_path, forecast_report.oneportal_path, forecast_report.changelog_path]
+        temp_files = [advisor.vip_path, advisor.oneportal_path, advisor.changelog_path]
         for file in temp_files:
             os.remove(file)
-        for i in forecast_report.file_list:
+        for i in advisor.file_list:
             print(i)
 # Marking the report creation process as complete for logging.
-        forecast_report.complete = 1
-        print(f"Ticket Count: {forecast_report.tickets}")
-        logging.info('User ran a report which completed successfully: ' + str(forecast_report))
+        advisor.complete = 1
+        print(f"Ticket Count: {advisor.tickets}")
+        logging.info('User ran a report which completed successfully: ' + str(advisor))
 
         return render_template('return_report.html',
-                        malformed_tickets=malformed_tickets, output_fn=output_fn)
+                               legend="Report Generated!",
+                               malformed_tickets=advisor.malformed_tickets,
+                               output_fn=output_fn)
 
     return render_template('report_generator.html', title='Forecast Report Generator',
     form=form, legend='Forecast Report Generator')
@@ -83,28 +85,28 @@ def send_xlsx():
                      #         oneportal_path = save_csv(form.oneportal_input.data)
                      #         changelog_path = save_csv(form.changelog_input.data)
                      # # Creating a class instance with path variables
-                     #         forecast_report = ForecastHelper(vip_path, oneportal_path, changelog_path)
+                     #         advisor = ForecastHelper(vip_path, oneportal_path, changelog_path)
                      #
                      # # Data cleaning
-                     #         vip_cleaned_list = vip_clean(forecast_report)
-                     #         oneportal_cleaned_list = oneportal_clean(forecast_report)
+                     #         vip_cleaned_list = vip_clean(advisor)
+                     #         oneportal_cleaned_list = oneportal_clean(advisor)
                      #         changelog_cleaned_list, changelog_problems, ticket_count = \
-                     #             changelog_clean(forecast_report)
+                     #             changelog_clean(advisor)
                      # # Report merging
                      #         inventory_and_orders_units = \
                      #             merged_units(vip_cleaned_list, oneportal_cleaned_list, \
-                     #             changelog_cleaned_list, forecast_report.date_list)
+                     #             changelog_cleaned_list, advisor.date_list)
                      #         output_fn = excel_writer(inventory_and_orders_units, \
-                     #              forecast_report)
+                     #              advisor)
                      #         if form.email_toggle.data == True:
-                     #             email_writer(inventory_and_orders_units, forecast_report.date_list)
+                     #             email_writer(inventory_and_orders_units, advisor.date_list)
                      # # Removing temp files
                      #         temp_files = [vip_path, oneportal_path, changelog_path]
                      #         for file in temp_files:
                      #             os.remove(file)
                      # # Marking the report creation process as complete for logging.
-                     #         forecast_report.complete = 1
-                     #         logging.info('User ran a report which completed successfully: ' + str(forecast_report))
+                     #         advisor.complete = 1
+                     #         logging.info('User ran a report which completed successfully: ' + str(advisor))
                      #
                      #         return render_template('return_report.html',
                      #                         testing=changelog_problems, output_fn=output_fn)

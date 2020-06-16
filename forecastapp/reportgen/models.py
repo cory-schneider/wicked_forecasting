@@ -17,10 +17,11 @@ def temp_folder():
 class ForecastHelper():
     def __init__(self, form):
         self.file_list = []
+        self.date_list = []
+        self.malformed_tickets = []
         self.temp_report_path = temp_folder()
         self.vip_path = save_csv(form.vip_input.data)
         self.oneportal_path = save_csv(form.oneportal_input.data)
-        self.date_list = []
         self.changelog_path = save_csv(form.changelog_input.data)
         self.file_list = [self.vip_path,
                           self.oneportal_path,

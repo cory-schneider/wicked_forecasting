@@ -9,12 +9,12 @@ import os
 from flask import (current_app)
 
 def merged_units(vip_cleaned_list, oneportal_cleaned_list, \
-                 changelog_cleaned_list, date_list):
+                 changelog_cleaned_list, advisor):
     units_report = []
 
     vip_header = vip_cleaned_list[0]
     merged_header = vip_header
-    for i in date_list[1:]:
+    for i in advisor.date_list[1:]:
         merged_header.append(i)
 
 # Write a row for each wholesaler inventory item. Merged report will exclude
@@ -27,7 +27,7 @@ def merged_units(vip_cleaned_list, oneportal_cleaned_list, \
 
 # Write a zero for each order date initially, to be replaced if there's an
 # order in One Portal.
-        for i in range(len(date_list)-1):
+        for i in range(len(advisor.date_list)-1):
             new_row.append(0)
         units_report.append(new_row)
 

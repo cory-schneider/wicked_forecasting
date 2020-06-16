@@ -26,9 +26,9 @@ def merge_data_vip(cleaned):
 
     return merged_data
 
-def vip_clean(forecast_report):
+def vip_clean(advisor):
     vip_cleaned = []
-    with open(forecast_report.vip_path, "r", newline = "") as input_file:
+    with open(advisor.vip_path, "r", newline = "") as input_file:
         reader = csv.reader(input_file, delimiter = ",")
         next(reader)
         vip_test = []
@@ -67,7 +67,7 @@ def vip_clean(forecast_report):
             "WSLR ID",
             "Product - PDCN",
             "DAILY ROS (60 day period)",
-            forecast_report.last_friday]
+            advisor.last_friday]
     vip_merged.insert(0, vip_header)
 
     return vip_merged
