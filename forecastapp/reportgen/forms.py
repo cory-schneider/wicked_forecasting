@@ -1,5 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, TextAreaField, IntegerField
+from wtforms import (StringField, SubmitField, TextAreaField, IntegerField,
+                     BooleanField)
 from flask_wtf.file import FileField, FileAllowed, FileRequired
 from wtforms.validators import DataRequired
 
@@ -10,7 +11,5 @@ class ReportGeneratorForm(FlaskForm):
                 validators=[FileAllowed(['csv'], '.csv only!'), FileRequired()])
     changelog_input = FileField('Changelog .csv file:',
                 validators=[FileAllowed(['csv'], '.csv only!'), FileRequired()])
-    # doh_target = IntegerField('DOH Target:',
-    #                     validators=[DataRequired()],
-    #                     default='25')
+    email_toggle = BooleanField('Write Email Templates', default="checked")
     submit = SubmitField('Upload File')

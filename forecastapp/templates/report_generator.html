@@ -47,6 +47,10 @@
           {{ form.changelog_input(class="form-control form-control-lg rounded-0") }}
         {% endif %}
       </div>
+      <div class="form-check">
+        {{ form.email_toggle(class="form-check-input") }}
+        {{ form.email_toggle.label(class="form-check-label") }}
+      </div>
     </fieldset>
     <div class="input-group">
       {{ form.submit(class="btn btn-outline-secondary") }}

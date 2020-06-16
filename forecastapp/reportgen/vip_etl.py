@@ -40,10 +40,7 @@ def vip_clean(forecast_report):
             try:
                 state = str(row[0])
                 wholesaler = "".join([i for i in str(row[1]) if i.isalpha() or i == " "])
-                try:
-                    wholesaler_id = int(row[2])
-                except:
-                    wholesaler_id = int(''.join([i for i in row[2] if i.isdigit()]))
+                wholesaler_id = int(''.join([i for i in row[2] if i.isdigit()]))
                 wholesaler_id = utils.merge_wslr(wholesaler_id)
                 pdcn = utils.pdcn_cleanup(str(row[4]))
                 inventory_units = round(float(row[5]), 1)
@@ -70,10 +67,7 @@ def vip_clean(forecast_report):
             "WSLR ID",
             "Product - PDCN",
             "DAILY ROS (60 day period)",
-            # CHANGE THIS FOR THE LOVE OF GOD
-            datetime.date(datetime(2020, 6, 5))]
-
-            # forecast_report.last_friday]
+            forecast_report.last_friday]
     vip_merged.insert(0, vip_header)
 
     return vip_merged

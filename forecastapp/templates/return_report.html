@@ -6,10 +6,31 @@
           <a href="{{ url_for('reportgen.send_xlsx', output_fn=output_fn) }}">Download .XLSX Forecast Worksheet</a><br>
         </div>
         <div class="col-md-9">
-          <p class="font-weight-normal"></p>
-          {% for line in testing %}
-            {{ line }}<br>
-          {% endfor %}
+            <table class="table table-striped table-sm table-hover">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Entered</th>
+                  <th scope="col">Orig. Date</th>
+                  <th scope="col">WSLR</th>
+                  <th scope="col">PDCN</th>
+                  <th scope="col">Orig Qty</th>
+                  <th scope="col">New Qty</th>
+                  <th scope="col">New Date</th>
+                  <th scope="col">Issue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <p class="font-weight-light">
+                {% for row in malformed_tickets %}
+                <tr>
+                  {% for cell in row %}
+                    <td>{{ cell }}</td>
+                  {% endfor %}
+                </tr>
+                {% endfor %}
+                </p>
+              </tbody>
+            </table>
         </div>
       </div>
     </div>

@@ -23,10 +23,7 @@ def oneportal_pdcn(oneportal_data):
 def oneportal_clean(forecast_report):
     oneportal_cleaned = []
     date_list = []
-    last_friday = forecast_report.last_friday
-    # date_list.append(last_friday)
-    # CHANGE THIS FOR THE LOVE OF GOD
-    date_list.append(datetime.date(datetime(2020, 6, 5)))
+    date_list.append(forecast_report.last_friday)
 
     with open(forecast_report.oneportal_path, 'r', newline = "") as input_file:
         reader = csv.reader(input_file, delimiter = ",")
@@ -34,10 +31,7 @@ def oneportal_clean(forecast_report):
 
         for row in reader:
             wholesaler = str(row[4])
-            try:
-                wholesaler_id = int(row[3])
-            except:
-                wholesaler_id = int(''.join([i for i in row[3] if i.isdigit()]))
+            wholesaler_id = int(''.join([i for i in row[3] if i.isdigit()]))
             wholesaler_id = utils.merge_wslr(wholesaler_id)
             pdcn = str(row[1])
             pdcn = utils.pdcn_cleanup(pdcn)
@@ -48,7 +42,10 @@ def oneportal_clean(forecast_report):
             m = int(date_split[1])
             d = int(date_split[2])
             delivery_date = datetime.date(datetime(y, m, d))
-            delivery_date = delivery_date - dt.timedelta(days=delivery_date.weekday())
+# Handles cases where delivery week is listed as Tuesday because Monday is a holiday
+            delivery_date = utils.prev_monday(delivery_date)
+            #I can't figure out why I wrote this so I'm scared to delete it
+            #delivery_date = delivery_date - dt.timedelta(days=delivery_date.weekday())
             wslr_contact = str(row[7])
 
             if delivery_date not in date_list:

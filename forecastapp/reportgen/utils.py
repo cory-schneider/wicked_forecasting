@@ -3,6 +3,7 @@ import os
 import csv
 import secrets
 from flask import current_app
+from dateutil.relativedelta import relativedelta, MO
 
 wslr_info = {
     "Great Bay Dist" : [40901, 40915],
@@ -134,11 +135,22 @@ def save_csv(form_csv):
 
     return csv_path
 
-def save_report_csv(list, output_fn):
-    """
-    Saves cleaned base reports. Takes a list and outputs csv.
-    """
-    with open(output_fn, 'w', newline='') as output_file:
-        writer = csv.writer(output_file)
-        for row in list:
-            writer.writerow(row)
+def pdcn_plus_product_name(pdcn):
+    for x, y in product_names.items():
+        if pdcn not in y:
+            continue
+        else:
+            pdcn_verbose = str(x) + " - " + str(y)
+            break
+    return pdcn_verbose
+
+def unique(wslr_list):
+    # insert the list into a set
+    list_set = set(wslr_list)
+    # convert the set to the list
+    unique_list = list(list_set)
+    return unique_list
+
+def prev_monday(date):
+    prev_monday = date + relativedelta(weekday=MO(-1))
+    return prev_monday
