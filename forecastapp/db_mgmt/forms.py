@@ -18,7 +18,3 @@ class PdcnMergeAdd(FlaskForm):
 class RemovePdcnPair(FlaskForm):
     removeCheck = BooleanField('Remove')
     submit = SubmitField('Remove PDCN Pairs')
-
-# https://wtforms.readthedocs.io/en/latest/specific_problems/
-# Dynamic Form Composition -- uh actually maybe not
-# https://stackoverflow.com/questions/31859903/get-the-value-of-a-checkbox-in-flask

@@ -18,6 +18,11 @@ def changelog_clean(advisor):
         changelog_reader = csv.reader(input_file, delimiter = ",")
 
         for row in changelog_reader:
+            pdcn = str(row[3]).upper()
+            pdcn = utils.pdcn_cleanup(pdcn)
+# Skip tickets that aren't part of our forecasting regime
+            if pdcn not in utils.product_names.values():
+                continue
             try:
                 orig_week = date_reformat_changelog(row[1])
                 new_week = date_reformat_changelog(row[6])
@@ -53,7 +58,7 @@ def changelog_clean(advisor):
                         order_adjustment,
                         new_week])
 
-    return changelog
+    advisor.changelog = changelog
 
 # Deprecated
 # def nearest(dates, truck):

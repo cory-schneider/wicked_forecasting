@@ -5,7 +5,14 @@
         <div class="col-md-12">
           <legend class="border-bottom mb-4">Remove PDCN Pairs</legend>
         </div>
-        <div class="col-md-6">
+
+        <div class="col-md-8">
+          <ul>
+            <li>Select any PDCN pairs you want to remove with the checkboxes to the left, then click submit.</li>
+            <li>There will be no confirmation and there is no "Undo" button. Choose carefully.</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
           <form method="POST" action="">
             {{ removePair.hidden_tag() }}
             <fieldset class="form-group">
@@ -30,16 +37,10 @@
             </table>
             </fieldset>
             <div class="form-group">
-              {{ removePair.submit(class="btn btn-outline-info") }} ||
+              {{ removePair.submit(class="btn btn-outline-info") }}<br>
               <a href="{{ url_for('db_mgmt.db_manager') }}">Back to Database Manager</a>
             </div>
           </form>
-        </div>
-        <div class="col-md-6">
-          <ul>
-            <li>Select any PDCN pairs you want to remove with the checkboxes to the left, then click submit.</li>
-            <li>There will be no confirmation and there is no "Undo" button. Choose carefully.</li>
-          </ul>
         </div>
       </div>
     </div>

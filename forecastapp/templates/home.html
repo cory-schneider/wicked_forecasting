@@ -5,23 +5,11 @@
     <div class="row">
       <div class="col-sm">
         {% if current_user.is_authenticated %}
-          <h6>To Do</h6>
-          <ul>
-            <li>Add WSLR group functionality</li>
-            <ul>
-              <li>Provide five text fields</li>
-              <li>For x in list not null, concat and add to db</li>
-              <ul>
-                <li>"10995, 10900" : "10995"</li>
-                <li>"10995, 10900" : "10900"</li>
-              </ul>
-            </ul>
-            <li>Complete database architecture plan</li>
-            <li>Add some users</li>
-            <li>FAQ</li>
-            <li>Detailed instructions with screenshots and report configurations</li>
-            <li>Video trainings</li>
-          </ul>
+          <div class="col-md-6">
+            <p class="font-weight-normal">
+              Reports, database management, blah blah blah.
+            </p>
+          </div>
         {% else %}
           <div class="col-md-4">
             <form method="POST" action="">

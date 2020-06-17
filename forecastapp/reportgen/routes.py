@@ -29,13 +29,13 @@ def report_generator():
 # Data cleaning
         vip_cleaned_list = vip_clean(advisor)
         oneportal_cleaned_list = oneportal_clean(advisor)
-        changelog_cleaned_list = changelog_clean(advisor)
+        changelog_clean(advisor)
 # Report merging
         inventory_and_orders_units = \
-            merged_units(vip_cleaned_list, oneportal_cleaned_list, \
-            changelog_cleaned_list, advisor)
+            merged_units(vip_cleaned_list, oneportal_cleaned_list, advisor)
         output_fn = excel_writer(inventory_and_orders_units, \
              advisor)
+        advisor.output_fn = output_fn
         if form.email_toggle.data == True:
             email_writer(inventory_and_orders_units, advisor)
 # Removing temp files
@@ -50,9 +50,9 @@ def report_generator():
         logging.info('User ran a report which completed successfully: ' + str(advisor))
 
         return render_template('return_report.html',
-                               legend="Report Generated!",
-                               malformed_tickets=advisor.malformed_tickets,
-                               output_fn=output_fn)
+                               output_fn=output_fn,
+                               advisor=advisor,
+                               legend="Report Generated!")
 
     return render_template('report_generator.html', title='Forecast Report Generator',
     form=form, legend='Forecast Report Generator')
@@ -67,49 +67,3 @@ def send_xlsx():
                      # mimetype='text/csv',
                      attachment_filename=attachment_filename,
                      as_attachment=True)
-
-
-
-
-
-
-
-# Backup route before re-org
-                     # @reportgen.route("/report_generator", methods=['GET', 'POST'])
-                     # @login_required
-                     # def report_generator():
-                     #     form = ReportGeneratorForm()
-                     #     if form.validate_on_submit():
-                     # # Saving CSV files to temp folder and creating path variables
-                     #         vip_path = save_csv(form.vip_input.data)
-                     #         oneportal_path = save_csv(form.oneportal_input.data)
-                     #         changelog_path = save_csv(form.changelog_input.data)
-                     # # Creating a class instance with path variables
-                     #         advisor = ForecastHelper(vip_path, oneportal_path, changelog_path)
-                     #
-                     # # Data cleaning
-                     #         vip_cleaned_list = vip_clean(advisor)
-                     #         oneportal_cleaned_list = oneportal_clean(advisor)
-                     #         changelog_cleaned_list, changelog_problems, ticket_count = \
-                     #             changelog_clean(advisor)
-                     # # Report merging
-                     #         inventory_and_orders_units = \
-                     #             merged_units(vip_cleaned_list, oneportal_cleaned_list, \
-                     #             changelog_cleaned_list, advisor.date_list)
-                     #         output_fn = excel_writer(inventory_and_orders_units, \
-                     #              advisor)
-                     #         if form.email_toggle.data == True:
-                     #             email_writer(inventory_and_orders_units, advisor.date_list)
-                     # # Removing temp files
-                     #         temp_files = [vip_path, oneportal_path, changelog_path]
-                     #         for file in temp_files:
-                     #             os.remove(file)
-                     # # Marking the report creation process as complete for logging.
-                     #         advisor.complete = 1
-                     #         logging.info('User ran a report which completed successfully: ' + str(advisor))
-                     #
-                     #         return render_template('return_report.html',
-                     #                         testing=changelog_problems, output_fn=output_fn)
-                     #
-                     #     return render_template('report_generator.html', title='Forecast Report Generator',
-                     #     form=form, legend='Forecast Report Generator')

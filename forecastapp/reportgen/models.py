@@ -27,8 +27,8 @@ class ForecastHelper():
                           self.oneportal_path,
                           self.changelog_path]
         self.today = dt.today()
-        self.last_friday = datetime.date(datetime(2020, 6, 5))
-        # self.last_friday = self.today + relativedelta(weekday=FR(-1))
+        # self.last_friday = datetime.date(datetime(2020, 6, 5))
+        self.last_friday = self.today + relativedelta(weekday=FR(-1))
         self.user = current_user.email
         self.submission_time = datetime.now()
         self.complete = 0

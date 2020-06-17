@@ -50,8 +50,8 @@ Thanks for your business!"
         item_list = []
         for r in report_units:
             if str(r[2]) == w[0]:
-                name_and_pdcn = utils.pdcn_plus_product_name(r[3])
-                new_item = name_and_pdcn + " - "
+                product = utils.pdcn_plus_product_name(r[3])
+                new_item = product + " - "
                 item_list.append(new_item)
         email.append("Tickets Requested:")
         for d in advisor.date_list[2:5]:
@@ -67,6 +67,27 @@ Thanks for your business!"
                 email.append(i)
             email.append("")
         email.append(closer)
+
+        tickets = []
+
+        for ticket in advisor.changelog:
+            wslr = w[0]
+            wslr_chg_log = ticket[1]
+            if wslr == wslr_chg_log:
+                product = utils.pdcn_plus_product_name(ticket[2])
+                adjustment = ticket[3]
+                date = ticket[4]
+                if adjustment > 0:
+                    ticket_verbose = f"{product} - {adjustment} units added to {date}"
+                if adjustment < 0:
+                    ticket_verbose = f"{product} - {abs(adjustment)} units removed from {date}"
+                tickets.append(ticket_verbose)
+        if tickets:
+            email.append("")
+            email.append("Tickets already in the system:")
+            tickets = sorted(tickets)
+            for ticket in tickets:
+                email.append(ticket)
 
         wslr_stripped = w[1].replace(" ", "").lower() + w[0].replace(", ", "")
 

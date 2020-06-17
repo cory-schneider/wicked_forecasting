@@ -8,8 +8,7 @@ from openpyxl.formatting.rule import CellIsRule
 import os
 from flask import (current_app)
 
-def merged_units(vip_cleaned_list, oneportal_cleaned_list, \
-                 changelog_cleaned_list, advisor):
+def merged_units(vip_cleaned_list, oneportal_cleaned_list, advisor):
     units_report = []
 
     vip_header = vip_cleaned_list[0]
@@ -63,8 +62,8 @@ def merged_units(vip_cleaned_list, oneportal_cleaned_list, \
 
     vip_wslr_id_index = vip_header.index("WSLR ID")
     vip_pdcn_index = vip_header.index("Product - PDCN")
-# Making Adjustments to the report based on changelog_cleaned_list
-    for ticket in changelog_cleaned_list:
+# Making Adjustments to the report based on advisor.changelog
+    for ticket in advisor.changelog:
         ticket_wslr_id = ticket[1]
         ticket_pdcn = ticket[2]
         adjustment_amount = ticket[3]

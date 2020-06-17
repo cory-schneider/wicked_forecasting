@@ -23,7 +23,7 @@ def pdcn_pair_add():
                                  author=current_user)
         db.session.add(newPdcnPair)
         db.session.commit()
-        flash('PDCN Merge Added', 'success')
+        flash('PDCN Pair Added to Database', 'success')
         return redirect(url_for('db_mgmt.pdcn_pair_add'))
 
     return render_template('pdcn_pair_add.html', title='Add PDCN Pairs',
@@ -42,7 +42,7 @@ def pdcn_pair_remove():
             pdcnPair = MergedPdcn.query.get_or_404(pair_id)
             db.session.delete(pdcnPair)
         db.session.commit()
-        flash('PDCN Pair(s) Removed', 'success')
+        flash('PDCN Pair(s) Removed from Database', 'success')
         return redirect(url_for('db_mgmt.pdcn_pair_remove'))
 
     return render_template('pdcn_pair_remove.html',
