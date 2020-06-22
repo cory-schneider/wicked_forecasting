@@ -8,8 +8,8 @@
           PDCN Merging
         </button>
         <div>
-            <a class="dropdown-item" href="{{ url_for('db_mgmt.pdcn_pair_add') }}">Add PDCN Pairs</a>
-            <a class="dropdown-item" href="{{ url_for('db_mgmt.pdcn_pair_remove') }}">Remove PDCN Pairs</a>
+            <a class="dropdown-item" href="{{ url_for('database.pdcn_pair_add') }}">Add PDCN Pairs</a>
+            <a class="dropdown-item" href="{{ url_for('database.pdcn_pair_remove') }}">Remove PDCN Pairs</a>
         </div>
       </div>
       <div class="col-sm">
@@ -17,9 +17,8 @@
           WSLR Merging
         </button>
         <div>
-            <a class="dropdown-item" href="#">List all WSLR Groups</a>
-            <a class="dropdown-item" href="#">Add WSLR Group</a>
-            <a class="dropdown-item" href="#">Remove WSLR Groups</a>
+            <a class="dropdown-item" href="{{ url_for('database.wslr_fam_add') }}">Add WSLR Group</a>
+            <a class="dropdown-item" href="{{ url_for('database.wslr_fam_remove') }}">Remove WSLR Groups</a>
         </div>
       </div>
     </div>

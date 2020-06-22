@@ -29,11 +29,11 @@ def create_app(config_class=Config):
     from forecastapp.posts.routes import posts
     from forecastapp.main.routes import main
     from forecastapp.reportgen.routes import reportgen
-    from forecastapp.db_mgmt.routes import db_mgmt
+    from forecastapp.database.routes import database
     app.register_blueprint(users)
     app.register_blueprint(posts)
     app.register_blueprint(main)
     app.register_blueprint(reportgen)
-    app.register_blueprint(db_mgmt)
+    app.register_blueprint(database)
 
     return app

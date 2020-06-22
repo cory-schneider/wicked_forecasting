@@ -1,13 +1,13 @@
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 09:29:36] "[37mGET /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 09:29:36] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 09:29:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 09:29:43] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 09:29:43] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 09:29:45] "[37mGET /pdcn_merge_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 09:29:46] "[37mGET /pdcn_merge_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 19:31:20] "[37mGET / HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 19:31:20] "[37mGET /static/main.css HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 19:31:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 19:31:22] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 19:31:22] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 19:31:24] "[37mGET /pdcn_merge_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 19:31:25] "[37mGET /pdcn_merge_add HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\models.py', reloading
@@ -84,7 +84,7 @@ INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:18:21] "[37mGET /?__debugger__=yes&
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:18:21] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:18:41] "[37mGET / HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:18:42] "[37mGET /static/main.css HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:18:53] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:18:53] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:18:53] "[35m[1mGET /pdcn_merge_add HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:18:54] "[37mGET /pdcn_merge_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:18:54] "[37mGET /pdcn_merge_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
@@ -100,7 +100,7 @@ INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:19:48] "[37mGET /home HTTP/1.1[0m"
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:19:56] "[32mPOST /home HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:19:57] "[37mGET /home HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:19:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:20:33] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:20:33] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:20:34] "[35m[1mGET /pdcn_merge_add HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:20:34] "[37mGET /pdcn_merge_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:20:34] "[37mGET /pdcn_merge_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -120,7 +120,7 @@ INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:22:26] "[37mGET /pdcn_merge_remove?
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:22:26] "[37mGET /pdcn_merge_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:22:26] "[37mGET /pdcn_merge_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:22:26] "[37mGET /pdcn_merge_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:23:43] "[35m[1mGET /pdcn_merge_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:23:43] "[37mGET /pdcn_merge_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -134,7 +134,7 @@ INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:24:12] "[37mGET /pdcn_merge_remove?
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:24:12] "[37mGET /pdcn_merge_remove?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:24:13] "[37mGET /pdcn_merge_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:24:13] "[37mGET /pdcn_merge_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:25:13] "[35m[1mGET /pdcn_merge_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:25:13] "[37mGET /pdcn_merge_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -154,14 +154,14 @@ INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:30:40] "[32mPOST /pdcn_merge_add HT
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:30:40] "[37mGET /pdcn_merge_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:31:10] "[32mPOST /pdcn_merge_add HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:31:11] "[37mGET /pdcn_merge_add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\models.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:38:01] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:38:01] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 22:38:02] "[37mGET /pdcn_merge_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\models.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:02:01] "[37mGET /about HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:02:03] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:02:03] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:02:04] "[35m[1mGET /pdcn_merge_add HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:02:05] "[37mGET /pdcn_merge_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:02:05] "[37mGET /pdcn_merge_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
@@ -179,23 +179,23 @@ INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:03:29] "[37mGET /pdcn_merge_remove 
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:03:32] "[37mGET /pdcn_merge_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:03:41] "[32mPOST /pdcn_merge_add HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:03:41] "[37mGET /pdcn_merge_add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\models.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\models.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:09:23] "[37mGET /pdcn_merge_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:09:24] "[37mGET /home HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:09:27] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:09:27] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:09:28] "[37mGET /pdcn_merge_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:09:29] "[37mGET /pdcn_merge_add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:11:17] "[33mGET /pdcn_merge_add HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:11:23] "[33mGET /pdcn_merge_add HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:11:53] "[33mGET /pdcn_merge_add HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:12:00] "[33mGET /pdcn_merge_add HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:12:27] "[37mGET /home HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:12:29] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:12:29] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:12:31] "[35m[1mGET /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:12:31] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:12:31] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
@@ -204,33 +204,33 @@ INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:12:31] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:12:31] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:12:32] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:13:06] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:14:25] "[33mGET /pdcn_merge_remove HTTP/1.1[0m" 404 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:15:05] "[33mGET /pdcn_merge_remove HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:15:07] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:15:07] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:15:08] "[37mGET /pdcn_pair_list HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:15:49] "[37mGET /pdcn_pair_list HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:15:51] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:28:02] "[35m[1mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:28:02] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -239,7 +239,7 @@ INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:28:02] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:28:02] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:28:02] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:28:03] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:28:20] "[35m[1mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:28:20] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -255,23 +255,23 @@ INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:28:40] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:30:57] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:31:26] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:31:59] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:35:22] "[37mGET /about HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:35:24] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:35:24] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:35:26] "[37mGET /pdcn_pair_list HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [11/Jun/2020 23:35:27] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 11:01:30] "[37mGET /about HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 11:01:30] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 11:01:30] "[37mGET /home HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 11:01:33] "[37mGET /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 11:01:34] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 11:01:34] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 11:23:13] "[37mGET /pdcn_pair_list HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 11:23:14] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 12:30:25] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:13:55] "[35m[1mGET /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:13:55] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -287,7 +287,7 @@ INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:14:02] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:14:02] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:14:02] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:14:03] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:14:53] "[35m[1mGET /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:14:53] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -301,7 +301,7 @@ INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:16:28] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:16:28] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:16:28] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:16:29] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:21:04] "[35m[1mGET /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:21:04] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -309,9 +309,9 @@ INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:21:04] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:21:04] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:21:04] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:21:04] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:21:43] "[35m[1mGET /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [12/Jun/2020 13:21:43] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -339,7 +339,7 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:51:59] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:51:59] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:51:59] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:51:59] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:56:40] "[37mGET /pdcn_pair_list HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:56:43] "[35m[1mGET /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
@@ -348,11 +348,11 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:56:43] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:56:43] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:56:44] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:56:44] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:58:24] "[35m[1mGET /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:58:25] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -366,7 +366,7 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:58:42] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:58:42] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:58:42] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:58:42] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:59:46] "[35m[1mGET /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 13:59:46] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -381,7 +381,7 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:00:15] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:00:15] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:00:16] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:00:34] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:00:59] "[35m[1mGET /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:00:59] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -409,7 +409,7 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:04:36] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:04:50] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:flask_wtf.csrf:The CSRF token is missing.
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:04:52] "[37mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:05:35] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:05:35] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:05:37] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:05:47] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:flask_wtf.csrf:The CSRF token is missing.
@@ -430,7 +430,7 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:09:30] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:09:36] "[37mGET /account HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:09:37] "[37mGET /static/profile_pics/default.jpg HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:09:38] "[37mGET /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:09:42] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:09:42] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:09:43] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:09:58] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:11:17] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
@@ -438,7 +438,7 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:11:19] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:17:11] "[32mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:17:11] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:17:22] "[37mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:18:43] "[37mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:18:59] "[35m[1mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
@@ -456,7 +456,7 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:19:23] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:19:23] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:19:23] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 14:20:09] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:flask_wtf.csrf:The CSRF token has expired.
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:23:51] "[37mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
@@ -476,27 +476,27 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:40:36] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:40:38] "[37mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:41:12] "[37mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:41:14] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:42:24] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:51:51] "[37mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:51:53] "[37mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:53:34] "[33mGET /pdcn_pair_remove HTTP/1.1[0m" 404 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:55:08] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:55:10] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:55:10] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:55:14] "[37mPOST /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:55:43] "[37mGET /pdcn_pair_add_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:55:48] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
@@ -507,11 +507,11 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:56:23] "[32mPOST /pdcn_pair_remove 
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:56:23] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:57:24] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:57:32] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:10] "[35m[1mGET /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:10] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -520,7 +520,7 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:10] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:10] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:11] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:11] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:21] "[33mGET /pdcn_pair_ad HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:23] "[35m[1mGET /pdcn_pair_add_remove HTTP/1.1[0m" 500 -
@@ -529,14 +529,14 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:23] "[37mGET /pdcn_pair_add_remo
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:23] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:24] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:24] "[37mGET /pdcn_pair_add_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:34] "[33mGET /pdcn_pair_add_remove HTTP/1.1[0m" 404 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:53] "[35m[1mGET /pdcn_pair_add HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:53] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -545,16 +545,16 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:53] "[37mGET /pdcn_pair_add?__de
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:53] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:53] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 16:59:54] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:00:05] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:00:50] "[37mGET /home HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:00:52] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:00:52] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:00:54] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:00:56] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:00:58] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:01:02] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:47:54] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:47:54] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:47:56] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:48:00] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:48:03] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
@@ -577,19 +577,19 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:49:21] "[32mPOST /pdcn_pair_remove 
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:49:21] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:49:24] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:49:26] "[37mGET /home HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:49:30] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:49:30] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:49:32] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:52:24] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:52:24] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:54:27] "[35m[1mPOST /pdcn_pair_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:54:27] "[37mGET /pdcn_pair_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -598,12 +598,12 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:54:27] "[37mGET /pdcn_pair_remove?_
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:54:27] "[37mGET /pdcn_pair_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:54:27] "[37mGET /pdcn_pair_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:54:28] "[37mGET /pdcn_pair_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:55:02] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:55:04] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:55:04] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:55:16] "[35m[1mPOST /pdcn_pair_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:55:16] "[37mGET /pdcn_pair_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -615,11 +615,11 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:55:17] "[37mGET /pdcn_pair_remove?_
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:55:23] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:55:25] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:55:25] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:58:09] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:58:09] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:58:33] "[35m[1mPOST /pdcn_pair_remove HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:58:33] "[37mGET /pdcn_pair_remove?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
@@ -629,73 +629,73 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:58:34] "[37mGET /pdcn_pair_remove?_
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:58:34] "[37mGET /pdcn_pair_remove?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:58:34] "[37mGET /pdcn_pair_remove?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:59:20] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:59:47] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:59:47] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 17:59:52] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:00:17] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:00:18] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:00:18] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:00:20] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:00:33] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:00:33] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:00:35] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:00:35] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:00:36] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:00:38] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:00:38] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:02:35] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:04] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:29] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:29] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:31] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:44] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:44] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:46] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:46] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:47] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:49] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:49] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:03:51] "[37mGET /home HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:04:22] "[37mGET /home HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:04:24] "[37mGET /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:04:25] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:04:25] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:04:32] "[37mGET /pdcn_pair_list HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:04:36] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:04:41] "[37mGET /pdcn_pair_list HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:05:07] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:05:07] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:05:08] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:05:09] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:05:10] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:05:12] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:05:14] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:05:49] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:05:49] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:06] "[37mGET /messages HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:07] "[37mGET /static/profile_pics/default.jpg HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:09] "[37mGET /post/new HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:11] "[37mGET /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:12] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:12] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:15] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:16] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:18] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:21] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:21] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:06:41] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:06] "[37mGET /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:07] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:07] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:10] "[37mGET /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:11] "[37mGET /db_manager HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:13] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:11] "[37mGET /database HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:13] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:13] "[37mGET /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:30] "[37mGET /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:32] "[37mGET /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:34] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:34] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:35] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:38] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:38] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:39] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:42] "[37mGET /messages HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:07:44] "[37mGET /post/new HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:25] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:25] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:26] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:36] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:36] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
@@ -703,7 +703,7 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:41] "[32mPOST /pdcn_pair_add HTT
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:42] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:47] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:47] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:50] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:50] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:31:51] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:02] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:02] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
@@ -711,7 +711,7 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:07] "[32mPOST /pdcn_pair_remove 
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:07] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:09] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:09] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:13] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:13] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:31] "[32mGET /logout HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:31] "[37mGET /home HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:37] "[32mPOST /home HTTP/1.1[0m" 302 -
@@ -724,7 +724,7 @@ INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:44] "[37mGET /home HTTP/1.1[0m"
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:49] "[32mPOST /home HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:50] "[37mGET /home HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:53] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:32:53] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [13/Jun/2020 18:33:01] "[37mGET /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
@@ -2330,13 +2330,13 @@ INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:21:25] "[37mGET /report_generator H
 INFO:root:User ran a report which completed successfully: Report Instance('corybschneider@gmail.com', '2020-06-15 12:21:26.821077' '1')
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:21:32] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:22:09] "[37mGET /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:31:53] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:31:53] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:31:54] "[37mGET /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:31:56] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:31:56] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:31:57] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:31:59] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:31:59] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:31:59] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:32:00] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:32:00] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 12:32:02] "[37mGET /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\utils.py', reloading
 INFO:werkzeug: * Restarting with stat
@@ -2825,7 +2825,7 @@ INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:38:37] "[37mGET /report_generator HTTP/1.1[0m" 200 -
 INFO:root:User ran a report which completed successfully: Report ('User: corybschneider@gmail.com', 'Time: 2020-06-15 23:38:38.041093', 'Tickets: 307', 'Completed: 1')
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:38:43] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:39:14] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:39:14] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:39:15] "[37mGET /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:39:18] "[37mGET /messages HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:39:19] "[37mGET /post/new HTTP/1.1[0m" 200 -
@@ -2852,7 +2852,7 @@ INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:45:59] "[37mPOST /report_generator 
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:46:07] "[37mGET /account HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:46:10] "[37mGET /about HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:46:14] "[37mGET /messages HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:46:18] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:46:18] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:46:33] "[37mGET /report_generator HTTP/1.1[0m" 200 -
 INFO:root:User ran a report which completed successfully: Report ('User: corybschneider@gmail.com', 'Time: 2020-06-15 23:46:34.744142', 'Tickets: 307', 'Completed: 1')
 INFO:werkzeug:127.0.0.1 - - [15/Jun/2020 23:46:39] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
@@ -2909,7 +2909,7 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting
 INFO:werkzeug: * Restarting with stat
 INFO:root:User ran a report which completed successfully: Report ('User: corybschneider@gmail.com', 'Time: 2020-06-16 00:00:24.184748', 'Tickets: 307', 'Completed: 1')
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 00:00:29] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\forms.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
@@ -3073,18 +3073,18 @@ INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:45:26] "[37mGET /report_generator H
 INFO:root:User ran a report which completed successfully: Report ('User: corybschneider@gmail.com', 'Time: 2020-06-16 11:45:27.865244', 'Tickets: 234', 'Completed: 1')
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:45:32] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:45:34] "[37mGET /send_xlsx?output_fn=C%3A%5CUsers%5CCory%5Cgithub%5Cwicked_forecasting%5Cforecastapp%5Ctemp%2F2b9a1acd0027fdb2%2FForecastWorksheet.xlsx HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:00] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:00] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:01] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:06] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:07] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:08] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:09] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:09] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:10] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:28] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:28] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:28] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:30] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:30] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:32] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:32] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:33] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:44] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:48:45] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
@@ -3121,9 +3121,9 @@ INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:52:03] "[32mPOST /pdcn_pair_add HTT
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:52:03] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:52:13] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:52:13] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
-INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\db_mgmt\\routes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:59:40] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 11:59:41] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
@@ -3165,11 +3165,11 @@ INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:02:34] "[32mPOST /pdcn_pair_add HTT
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:02:35] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:02:45] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:02:45] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:04:26] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:04:26] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:04:28] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:05:16] "[37mGET /about HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:05:34] "[37mGET /report_generator HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:05:36] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:05:36] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 12:05:37] "[37mGET /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\forms.py', reloading
 INFO:werkzeug: * Restarting with stat
@@ -3196,15 +3196,15 @@ INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:05] "[37mGET /messages HTTP/1.1
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:07] "[37mGET /post/9 HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:09] "[32mPOST /post/9/delete HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:10] "[37mGET /messages HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:14] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:14] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:19] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:41] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:42] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:46] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:46] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:48] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:51] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:52] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:57] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:17:57] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:18:28] "[37mGET /report_generator HTTP/1.1[0m" 200 -
 INFO:root:User ran a report which completed successfully: Report ('User: corybschneider@gmail.com', 'Time: 2020-06-16 15:18:51.740804', 'Tickets: 234', 'Completed: 1')
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:18:57] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
@@ -3215,15 +3215,15 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:26:27] "[37mGET /about HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:26:36] "[37mGET /home HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:31:03] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:31:03] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:31:08] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:31:19] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:31:19] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:31:21] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:31:53] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:37:10] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 15:37:33] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 16:06:05] "[37mGET /home HTTP/1.1[0m" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 16:06:07] "[37mGET /db_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 16:06:07] "[37mGET /database HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 16:06:09] "[37mGET /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\models.py', reloading
 INFO:werkzeug: * Restarting with stat
@@ -3237,3 +3237,431 @@ INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 16:15:13] "[37mGET /report_generator?_
 INFO:root:User ran a report which completed successfully: Report ('User: corybschneider@gmail.com', 'Time: 2020-06-16 16:16:09.028071', 'Tickets: 162', 'Completed: 1')
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 16:16:13] "[37mPOST /report_generator HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 21:02:55] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 22:55:19] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2020 22:55:21] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 12:52:01] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 12:52:02] "[36mGET /static/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 12:52:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 12:52:04] "[37mGET /about HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:31:29] "[37mGET /about HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:31:31] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:31:31] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:31:42] "[32mPOST /home HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:31:42] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:31:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:32:42] "[37mGET /database HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:32:44] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:32:48] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:32:58] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:32:58] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:39] "[35m[1mGET /pdcn_pair_add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:40] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:40] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:40] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:40] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:40] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:40] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:42] "[35m[1mGET /pdcn_pair_add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:43] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:43] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:43] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:43] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:43] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:45] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:45] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:45] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:45] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:45] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:35:45] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:48] "[35m[1mGET /database HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:48] "[37mGET /database?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:48] "[37mGET /database?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:48] "[37mGET /database?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:48] "[37mGET /database?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:48] "[37mGET /database?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:49] "[37mGET /database?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:54] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:54] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:54] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:54] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:36:54] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:40:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:40:02] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:40:02] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:40:02] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:40:02] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:40:03] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:51:10] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:51:10] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:51:10] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:51:10] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:51:10] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 13:51:10] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:18:59] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:19:07] "[37mPOST / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:19:12] "[37mGET /register HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:19:54] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:19:54] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:19:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:19:58] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:20:01] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:20:03] "[37mGET /database HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:20:05] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:20:10] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:20:11] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:20:13] "[37mGET /database HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:20:14] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:20:16] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 14:20:17] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:42:41] "[35m[1mGET /database HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:42:41] "[37mGET /database?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:42:41] "[37mGET /database?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:42:41] "[37mGET /database?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:42:41] "[37mGET /database?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:42:42] "[37mGET /database?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:42:42] "[37mGET /database?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:42:51] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:42:54] "[37mGET /database HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:42:55] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:43:12] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:43:12] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:43:43] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:43:43] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:43:52] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:43:52] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:44:06] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:44:06] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:44:16] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:44:17] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:44:39] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:44:39] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:44:54] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:44:54] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:45:04] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:45:05] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:45:13] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:45:14] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:45:27] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:45:27] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:45:42] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:45:42] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:46:00] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:46:00] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:46:13] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:46:13] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:46:22] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:46:22] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:46:39] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:46:39] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:46:48] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:46:49] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:47:10] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:47:11] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:48:56] "[37mPOST /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:49:47] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:49:47] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:49:55] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:49:56] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:50:07] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:50:07] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:50:19] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:50:19] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:50:35] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:50:35] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:50:47] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:50:48] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:50:56] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:50:56] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:51:10] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:51:11] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:51:40] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:51:40] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:51:55] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:51:55] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:52:15] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:52:16] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:52:33] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:52:34] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:52:47] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:52:47] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:53:07] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:53:07] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:53:20] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:53:20] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:53:32] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:53:32] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:53:50] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:53:50] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:54:02] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:54:02] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:54:05] "[37mGET /database HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:54:07] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:54:13] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:54:14] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:54:16] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:54:17] "[37mGET /database HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:54:19] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:54:22] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 15:54:22] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:17:41] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:17:42] "[37mGET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:17:42] "[37mGET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:17:42] "[37mGET /home?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:17:42] "[37mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:17:42] "[37mGET /home?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:17:42] "[37mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:35] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:35] "[37mGET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:36] "[37mGET /home?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:36] "[37mGET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:36] "[37mGET /home?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:36] "[37mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:50] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:51] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:51] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:51] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:51] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:19:51] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:20:22] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:20:24] "[37mGET /database_portal HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:20:25] "[35m[1mGET /pdcn_pair_add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:20:25] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:20:25] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:20:25] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:20:25] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:20:26] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:20:26] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:23:26] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:23:26] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:23:27] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:23:27] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:23:27] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:23:27] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:23:27] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:23:58] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:01] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:02] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:05] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:06] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:09] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:13] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:13] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:14] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:15] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:17] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:18] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:21] "[37mGET /messages HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:28] "[37mGET /post/new HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:33] "[32mPOST /post/new HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:34] "[37mGET /messages HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:34] "[37mGET /static/profile_pics/default.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:36] "[37mGET /post/1 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:38] "[37mGET /post/1/update HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:42] "[32mPOST /post/1/update HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:42] "[37mGET /post/1 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:53] "[37mGET /account HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:24:59] "[32mPOST /account HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:25:00] "[37mGET /account HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:25:00] "[37mGET /static/profile_pics/ac228821ae6c1ff6.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 16:25:02] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:31] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:31] "[37mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:31] "[37mGET /about?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:31] "[37mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:31] "[37mGET /about?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:31] "[37mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:32] "[37mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:45] "[37mGET /about HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:49] "[37mGET /messages HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:54] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:55] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:16:58] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:17:01] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:17:12] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:17:14] "[37mGET /account HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:17:21] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:38:59] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:39:11] "[37mPOST /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:43:15] "[37mGET /about HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:43:19] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:43:21] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:03] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:04] "[35m[1mGET /wslr_fam_add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:04] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:04] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:04] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:05] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:05] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:05] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:15] "[35m[1mGET /wslr_fam_add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:15] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:16] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:16] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:16] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:16] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:51] "[35m[1mGET /wslr_fam_add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:51] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:51] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:51] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:51] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:49:52] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:50:21] "[35m[1mGET /wslr_fam_add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:50:21] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:50:21] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:50:21] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:50:22] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:50:22] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:50:38] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:51:20] "[35m[1mPOST /wslr_fam_add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:51:20] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:51:20] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:51:20] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:51:20] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:51:20] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:51:21] "[37mGET /wslr_fam_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\reportgen\\utils.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:52:37] "[32mPOST /wslr_fam_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:52:37] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:53:21] "[32mPOST /wslr_fam_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:53:21] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:55:08] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:55:25] "[32mPOST /wslr_fam_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:55:25] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:55:41] "[32mPOST /wslr_fam_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:55:41] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:55:50] "[32mPOST /wslr_fam_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:55:51] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:56:11] "[32mPOST /wslr_fam_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:56:11] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:56:44] "[32mPOST /wslr_fam_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:56:45] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:57:06] "[32mPOST /wslr_fam_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:57:07] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:57:21] "[32mPOST /wslr_fam_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:57:21] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:57:34] "[32mPOST /wslr_fam_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 18:57:34] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:16:42] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:17:02] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:17:06] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:17:07] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:17:08] "[37mGET /wslr_fam_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:17:12] "[32mPOST /wslr_fam_remove HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:17:12] "[37mGET /wslr_fam_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:17:15] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:17:17] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:17:33] "[32mPOST /wslr_fam_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:17:34] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:18:14] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:18:15] "[37mGET /wslr_fam_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:22:06] "[37mGET /wslr_fam_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:24:35] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:24:36] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:25:23] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:25:24] "[37mGET /wslr_fam_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:27:00] "[37mGET /report_generator HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:27:01] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:51:04] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:51:06] "[37mGET /wslr_fam_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:54:36] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:54:37] "[37mGET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:54:37] "[37mGET /home?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:54:37] "[37mGET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:54:37] "[37mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:54:37] "[37mGET /home?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:54:37] "[37mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:12] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:12] "[37mGET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:12] "[37mGET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:12] "[37mGET /home?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:12] "[37mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:12] "[37mGET /home?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:32] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:32] "[37mGET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:32] "[37mGET /home?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:32] "[37mGET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:33] "[37mGET /home?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:55:33] "[37mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:07] "[37mGET /home HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:10] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:11] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:18] "[35m[1mPOST /pdcn_pair_add HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:18] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:18] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:18] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:19] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:19] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:19] "[37mGET /pdcn_pair_add?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Cory\\github\\wicked_forecasting\\forecastapp\\database\\forms.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:37] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:37] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:41] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:42] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:45] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:45] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:48] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:49] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:50] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:56] "[32mPOST /pdcn_pair_add HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:56:56] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:57:05] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:57:07] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:57:10] "[32mPOST /pdcn_pair_remove HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:57:10] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:57:12] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:57:14] "[37mGET /about HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:57:16] "[37mGET /database_manager HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:57:17] "[37mGET /pdcn_pair_remove HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 19:57:20] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 20:02:25] "[37mGET /wslr_fam_add HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Jun/2020 20:02:37] "[37mGET /pdcn_pair_add HTTP/1.1[0m" 200 -

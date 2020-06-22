@@ -3,7 +3,7 @@ from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from forecastapp import db, login_manager
 from flask_login import UserMixin
 from flask import current_app
-from forecastapp.db_mgmt.models import MergedPdcn
+from forecastapp.database.models import PdcnPair, WholesalerFamily
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -17,7 +17,8 @@ class User(db.Model, UserMixin):
     image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
     password = db.Column(db.String(60), nullable=False)
     posts = db.relationship('Post', backref='author', lazy=True)
-    pdcnPairs = db.relationship('MergedPdcn', backref='author', lazy=True)
+    pdcnPairs = db.relationship('PdcnPair', backref='author', lazy=True)
+    wslrFams = db.relationship('WholesalerFamily', backref='author', lazy=True)
 
     def get_reset_token(self, expires_sec=1800):
         s = Serializer(current_app.config['SECRET_KEY'], expires_sec)

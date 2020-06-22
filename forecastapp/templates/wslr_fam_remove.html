@@ -3,18 +3,18 @@
     <div class="content-section">
       <div class="row">
         <div class="col-md-12">
-          <legend class="border-bottom mb-4">Remove PDCN Pairs</legend>
+          <legend class="border-bottom mb-4">Remove Wholesaler Family</legend>
         </div>
 
         <div class="col-md-8">
           <ul>
-            <li>Select any PDCN pairs you want to remove with the checkboxes to the left, then click submit.</li>
+            <li>Select any wholesaler families you want to remove with the checkboxes to the left, then click submit.</li>
             <li>There will be no confirmation and there is no "Undo" button. Choose carefully.</li>
           </ul>
         </div>
         <div class="col-md-4">
           <form method="POST" action="">
-            {{ removePair.hidden_tag() }}
+            {{ removeFam.hidden_tag() }}
             <fieldset class="form-group">
             <table class="table table-striped table-sm table-hover">
               <thead class="thead-dark">
@@ -24,20 +24,20 @@
                 </tr>
               </thead>
               <tbody>
-                {% for pdcnPair in pdcnPairList %}
+                {% for wslrFam in wslrFamList %}
                 <tr>
                   <th scope="row">
-                    {{ removePair.removeCheck(class="form-check-input", value = pdcnPair.id ) }}
-                    {{ pdcnPair.pdcnMain }}
+                    {{ removeFam.removeCheck(class="form-check-input", value = wslrFam.id ) }}
+                    {{ wslrFam.name }}
                   </th>
-                  <td>{{ pdcnPair.pdcnAlt }}</td>
+                  <td>{{ wslrFam.nums }}</td>
                 </tr>
                 {% endfor %}
               </tbody>
             </table>
             </fieldset>
             <div class="form-group">
-              {{ removePair.submit(class="btn btn-outline-info") }}<br>
+              {{ removeFam.submit(class="btn btn-outline-info") }}<br>
               <a href="{{ url_for('database.database_manager') }}">Back to Database Manager</a>
             </div>
           </form>
